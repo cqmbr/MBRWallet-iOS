@@ -1,0 +1,2460 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MBRWWallet Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">MBRWallet </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">重庆面壁人</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/addNewAccountWithName:pwd:success:failure:">+ addNewAccountWithName:pwd:success:failure:</option>
+		
+		<option value="//api/name/backupAccount:pwd:mnemonic:success:failure:">+ backupAccount:pwd:mnemonic:success:failure:</option>
+		
+		<option value="//api/name/checkOprationWithPwd:">+ checkOprationWithPwd:</option>
+		
+		<option value="//api/name/clearKeychainIfNeeded">+ clearKeychainIfNeeded</option>
+		
+		<option value="//api/name/exportKeystore:pwd:ksPwd:success:failure:">+ exportKeystore:pwd:ksPwd:success:failure:</option>
+		
+		<option value="//api/name/getAccountWithAddress:">+ getAccountWithAddress:</option>
+		
+		<option value="//api/name/getAccountWithName:">+ getAccountWithName:</option>
+		
+		<option value="//api/name/getAllAccount">+ getAllAccount</option>
+		
+		<option value="//api/name/getDefaultAccount">+ getDefaultAccount</option>
+		
+		<option value="//api/name/getEthCoin:">+ getEthCoin:</option>
+		
+		<option value="//api/name/getForceCoins">+ getForceCoins</option>
+		
+		<option value="//api/name/getNomalCoins">+ getNomalCoins</option>
+		
+		<option value="//api/name/getPasswordHint">+ getPasswordHint</option>
+		
+		<option value="//api/name/getPasswordSummary">+ getPasswordSummary</option>
+		
+		<option value="//api/name/handlePayWithPrarm:payParam:account:success:failure:">+ handlePayWithPrarm:payParam:account:success:failure:</option>
+		
+		<option value="//api/name/handleTransactionWithPrarm:account:success:failure:">+ handleTransactionWithPrarm:account:success:failure:</option>
+		
+		<option value="//api/name/haveSetPassword">+ haveSetPassword</option>
+		
+		<option value="//api/name/importAccountByKeystore:pwd:pwdKS:name:success:failure:">+ importAccountByKeystore:pwd:pwdKS:name:success:failure:</option>
+		
+		<option value="//api/name/importAccountByMnemonic:pwd:name:success:failure:">+ importAccountByMnemonic:pwd:name:success:failure:</option>
+		
+		<option value="//api/name/isSamePassword:">+ isSamePassword:</option>
+		
+		<option value="//api/name/modifyPasswordWithOldPwd:newPwd:success:failure:">+ modifyPasswordWithOldPwd:newPwd:success:failure:</option>
+		
+		<option value="//api/name/payWithPrarm:password:enableTouchId:success:failure:">+ payWithPrarm:password:enableTouchId:success:failure:</option>
+		
+		<option value="//api/name/payWithPrarm:password:success:failure:">+ payWithPrarm:password:success:failure:</option>
+		
+		<option value="//api/name/removeAccount:pwd:success:failure:">+ removeAccount:pwd:success:failure:</option>
+		
+		<option value="//api/name/renameAccount:newName:pwd:success:failure:">+ renameAccount:newName:pwd:success:failure:</option>
+		
+		<option value="//api/name/setAsDefaultAccount:pwd:success:failure:">+ setAsDefaultAccount:pwd:success:failure:</option>
+		
+		<option value="//api/name/setPasswardHint:">+ setPasswardHint:</option>
+		
+		<option value="//api/name/setPassword:">+ setPassword:</option>
+		
+		<option value="//api/name/signTransactionWithAccount:request:response:">+ signTransactionWithAccount:request:response:</option>
+		
+		<option value="//api/name/syncAllAccountBalance:">+ syncAllAccountBalance:</option>
+		
+		<option value="//api/name/syncAllERC20CoinList:">+ syncAllERC20CoinList:</option>
+		
+		<option value="//api/name/transferWithPrarm:password:enableTouchId:success:failure:">+ transferWithPrarm:password:enableTouchId:success:failure:</option>
+		
+		<option value="//api/name/transferWithPrarm:password:success:failure:">+ transferWithPrarm:password:success:failure:</option>
+		
+		<option value="//api/name/updateAccountCoinSelectSatate:toAccountAddress:callBack:">+ updateAccountCoinSelectSatate:toAccountAddress:callBack:</option>
+		
+	</optgroup>
+	
+
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MBRWWallet Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>MBRWWallet.h<br />MBRWWallet.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>钱包转账/支付</p>
+
+<p>  密码相关</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/clearKeychainIfNeeded" title="clearKeychainIfNeeded"></a>
+	<h3 class="method-title"><code><a href="#//api/name/clearKeychainIfNeeded">+&nbsp;clearKeychainIfNeeded</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>清除keychain上存储的数据</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)clearKeychainIfNeeded</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>清除keychain上存储的数据</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/syncAllAccountBalance:" title="syncAllAccountBalance:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/syncAllAccountBalance:">+&nbsp;syncAllAccountBalance:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>同步账户余额信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)syncAllAccountBalance:(void ( ^ ) ( BOOL success ))<em>complete</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>complete</code></th>
+						<td><p>完成</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>同步账户余额信息</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateAccountCoinSelectSatate:toAccountAddress:callBack:" title="updateAccountCoinSelectSatate:toAccountAddress:callBack:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateAccountCoinSelectSatate:toAccountAddress:callBack:">+&nbsp;updateAccountCoinSelectSatate:toAccountAddress:callBack:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>更新账户中币的选中状态</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)updateAccountCoinSelectSatate:(DCPBgCoin *)<em>coin</em> toAccountAddress:(NSString *)<em>address</em> callBack:(void ( ^ ) ( BOOL success ))<em>callBack</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>coin</code></th>
+						<td><p>DCPBgCoin</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>address</code></th>
+						<td><p>账户地址</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>callBack</code></th>
+						<td><p>完成</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>更新账户中币的选中状态</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getEthCoin:" title="getEthCoin:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getEthCoin:">+&nbsp;getEthCoin:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取账户中的eth币信息</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSDictionary *)getEthCoin:(NSDictionary *)<em>account</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>account</code></th>
+						<td><p>账户</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>eth</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>获取账户中的eth币信息</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Transaction Methods" name="task_Transaction Methods"></a>
+						<h2 class="task-title">Transaction Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/payWithPrarm:password:success:failure:" title="payWithPrarm:password:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/payWithPrarm:password:success:failure:">+&nbsp;payWithPrarm:password:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>支付：密码验证方式</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)payWithPrarm:(MBRWPayParam *)<em>param</em> password:(NSString *)<em>pwd</em> success:(MBRWTransactionSuccessBlock)<em>success</em> failure:(MBRWFailureBlock)<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>param</code></th>
+						<td><p>参数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pwd</code></th>
+						<td><p>密码</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>支付成功回调</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>支付失败回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>支付：密码验证方式</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Transaction.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/payWithPrarm:password:enableTouchId:success:failure:" title="payWithPrarm:password:enableTouchId:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/payWithPrarm:password:enableTouchId:success:failure:">+&nbsp;payWithPrarm:password:enableTouchId:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>支付
+enableTouchId==YES时，通过touchID验证，否则通过密码验证</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)payWithPrarm:(MBRWPayParam *)<em>param</em> password:(NSString *)<em>pwd</em> enableTouchId:(BOOL)<em>enableTouchId</em> success:(MBRWTransactionSuccessBlock)<em>success</em> failure:(MBRWFailureBlock)<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>param</code></th>
+						<td><p>参数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pwd</code></th>
+						<td><p>密码，enableTouchId==NO时有效</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>enableTouchId</code></th>
+						<td><p>是否启动touchuID验证</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>支付成功回调</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>支付失败回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>支付
+enableTouchId==YES时，通过touchID验证，否则通过密码验证</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Transaction.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/handlePayWithPrarm:payParam:account:success:failure:" title="handlePayWithPrarm:payParam:account:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/handlePayWithPrarm:payParam:account:success:failure:">+&nbsp;handlePayWithPrarm:payParam:account:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>处理交易逻辑</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)handlePayWithPrarm:(DCPTransactionRequest *)<em>request</em> payParam:(MBRWPayParam *)<em>payParam</em> account:(Account *)<em>account</em> success:(MBRWTransactionSuccessBlock)<em>success</em> failure:(MBRWFailureBlock)<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>request</code></th>
+						<td><p>交易请求</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>account</code></th>
+						<td><p>交易账户</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>成功</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>失败</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>处理交易逻辑</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Transaction.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/transferWithPrarm:password:success:failure:" title="transferWithPrarm:password:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/transferWithPrarm:password:success:failure:">+&nbsp;transferWithPrarm:password:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>转账：密码验证方式</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)transferWithPrarm:(MBRWTransferParam *)<em>param</em> password:(NSString *)<em>pwd</em> success:(MBRWTransactionSuccessBlock)<em>success</em> failure:(MBRWFailureBlock)<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>param</code></th>
+						<td><p>参数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pwd</code></th>
+						<td><p>密码</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>支付成功回调</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>支付失败回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>转账：密码验证方式</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Transaction.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/transferWithPrarm:password:enableTouchId:success:failure:" title="transferWithPrarm:password:enableTouchId:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/transferWithPrarm:password:enableTouchId:success:failure:">+&nbsp;transferWithPrarm:password:enableTouchId:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>转账
+enableTouchId==YES时，通过touchID验证，否则通过密码验证</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)transferWithPrarm:(MBRWTransferParam *)<em>param</em> password:(NSString *)<em>pwd</em> enableTouchId:(BOOL)<em>enableTouchId</em> success:(MBRWTransactionSuccessBlock)<em>success</em> failure:(MBRWFailureBlock)<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>param</code></th>
+						<td><p>参数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pwd</code></th>
+						<td><p>密码，enableTouchId==NO时有效</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>enableTouchId</code></th>
+						<td><p>是否启动touchuID验证</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>支付成功回调</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>支付失败回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>转账
+enableTouchId==YES时，通过touchID验证，否则通过密码验证</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Transaction.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/handleTransactionWithPrarm:account:success:failure:" title="handleTransactionWithPrarm:account:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/handleTransactionWithPrarm:account:success:failure:">+&nbsp;handleTransactionWithPrarm:account:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>处理交易逻辑</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)handleTransactionWithPrarm:(DCPTransactionRequest *)<em>request</em> account:(Account *)<em>account</em> success:(MBRWTransactionSuccessBlock)<em>success</em> failure:(MBRWFailureBlock)<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>request</code></th>
+						<td><p>交易请求</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>account</code></th>
+						<td><p>交易账户</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>成功</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>失败</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>处理交易逻辑</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Transaction.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/signTransactionWithAccount:request:response:" title="signTransactionWithAccount:request:response:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/signTransactionWithAccount:request:response:">+&nbsp;signTransactionWithAccount:request:response:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>交易签名</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)signTransactionWithAccount:(Account *)<em>account</em> request:(DCPTransactionRequest *)<em>request</em> response:(DCPTransactionResponse *)<em>response</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>account</code></th>
+						<td><p>ethAccount</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>request</code></th>
+						<td><p>订单请求</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>response</code></th>
+						<td><p>订单返回数据</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>签名后文本</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>交易签名</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Transaction.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Coin Methods" name="task_Coin Methods"></a>
+						<h2 class="task-title">Coin Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/syncAllERC20CoinList:" title="syncAllERC20CoinList:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/syncAllERC20CoinList:">+&nbsp;syncAllERC20CoinList:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>同步币列表数据</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)syncAllERC20CoinList:(void ( ^ ) ( BOOL success ))<em>callBack</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>callBack</code></th>
+						<td><p>结果</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>同步币列表数据</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getNomalCoins" title="getNomalCoins"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getNomalCoins">+&nbsp;getNomalCoins</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取非必须币列表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSArray&lt;DCPBgCoin*&gt; *)getNomalCoins</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>币数组</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>获取非必须币列表</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getForceCoins" title="getForceCoins"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getForceCoins">+&nbsp;getForceCoins</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取强制添加的币列表</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSArray&lt;DCPBgCoin*&gt; *)getForceCoins</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>币数组</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>获取强制添加的币列表</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Passward Methods" name="task_Passward Methods"></a>
+						<h2 class="task-title">Passward Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/setPassword:" title="setPassword:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setPassword:">+&nbsp;setPassword:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置交易密码</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setPassword:(NSString *)<em>pwd</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pwd</code></th>
+						<td><p>密码明文</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>设置交易密码</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/modifyPasswordWithOldPwd:newPwd:success:failure:" title="modifyPasswordWithOldPwd:newPwd:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/modifyPasswordWithOldPwd:newPwd:success:failure:">+&nbsp;modifyPasswordWithOldPwd:newPwd:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>修改密码</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)modifyPasswordWithOldPwd:(NSString *)<em>oldPwd</em> newPwd:(NSString *)<em>newPwd</em> success:(MBRWPasswordOprationSuccessBlock)<em>success</em> failure:(MBRWFailureBlock)<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>oldPwd</code></th>
+						<td><p>旧密码</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>newPwd</code></th>
+						<td><p>新密码</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>修改成功</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>修改失败</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>修改密码</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/haveSetPassword" title="haveSetPassword"></a>
+	<h3 class="method-title"><code><a href="#//api/name/haveSetPassword">+&nbsp;haveSetPassword</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>是否设置过交易密码</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)haveSetPassword</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>是否设置过交易密码</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isSamePassword:" title="isSamePassword:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isSamePassword:">+&nbsp;isSamePassword:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>密码是否相同</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)isSamePassword:(NSString *)<em>pwd</em></code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>BOOL</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>密码是否相同</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getPasswordSummary" title="getPasswordSummary"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getPasswordSummary">+&nbsp;getPasswordSummary</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取密码摘要</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)getPasswordSummary</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSString</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>获取密码摘要</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setPasswardHint:" title="setPasswardHint:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setPasswardHint:">+&nbsp;setPasswardHint:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设置密码提示</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setPasswardHint:(NSString *)<em>hint</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>hint</code></th>
+						<td><p>提示文本</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>设置密码提示</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getPasswordHint" title="getPasswordHint"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getPasswordHint">+&nbsp;getPasswordHint</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取密码提示文本</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)getPasswordHint</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>提示文本</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>获取密码提示文本</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Account Methods" name="task_Account Methods"></a>
+						<h2 class="task-title">Account Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/addNewAccountWithName:pwd:success:failure:" title="addNewAccountWithName:pwd:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addNewAccountWithName:pwd:success:failure:">+&nbsp;addNewAccountWithName:pwd:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>创建一个新账户并添加到钱包</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)addNewAccountWithName:(NSString *)<em>name</em> pwd:(NSString *)<em>pwd</em> success:(MBRWAccountOprationSuccessBlock)<em>success</em> failure:(MBRWFailureBlock)<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>账户名称</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pwd</code></th>
+						<td><p>交易密码</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>操作成功</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>操作失败</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>创建一个新账户并添加到钱包</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Account.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/importAccountByMnemonic:pwd:name:success:failure:" title="importAccountByMnemonic:pwd:name:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/importAccountByMnemonic:pwd:name:success:failure:">+&nbsp;importAccountByMnemonic:pwd:name:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>助记词导入账户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)importAccountByMnemonic:(NSString *)<em>mnemonic</em> pwd:(NSString *)<em>pwd</em> name:(NSString *)<em>name</em> success:(MBRWAccountOprationSuccessBlock)<em>success</em> failure:(MBRWFailureBlock)<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mnemonic</code></th>
+						<td><p>助记词</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pwd</code></th>
+						<td><p>交易密码</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>账户名称</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>操作成功</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>操作失败</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>助记词导入账户</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Account.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/importAccountByKeystore:pwd:pwdKS:name:success:failure:" title="importAccountByKeystore:pwd:pwdKS:name:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/importAccountByKeystore:pwd:pwdKS:name:success:failure:">+&nbsp;importAccountByKeystore:pwd:pwdKS:name:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>keystore导入账户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)importAccountByKeystore:(NSString *)<em>keyStore</em> pwd:(NSString *)<em>pwd</em> pwdKS:(NSString *)<em>pwdKS</em> name:(NSString *)<em>name</em> success:(MBRWAccountOprationSuccessBlock)<em>success</em> failure:(MBRWFailureBlock)<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyStore</code></th>
+						<td><p>keystore</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pwd</code></th>
+						<td><p>交易密码</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pwdKS</code></th>
+						<td><p>keystore密码</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>账户名称</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>操作成功</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>操作失败</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>keystore导入账户</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Account.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeAccount:pwd:success:failure:" title="removeAccount:pwd:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeAccount:pwd:success:failure:">+&nbsp;removeAccount:pwd:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>删除账户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)removeAccount:(NSString *)<em>name</em> pwd:(NSString *)<em>pwd</em> success:(MBRWAccountOprationSuccessBlock)<em>success</em> failure:(MBRWFailureBlock)<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>账户名</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pwd</code></th>
+						<td><p>校验密码</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>操作成功</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>操作失败</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>删除账户</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Account.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/backupAccount:pwd:mnemonic:success:failure:" title="backupAccount:pwd:mnemonic:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/backupAccount:pwd:mnemonic:success:failure:">+&nbsp;backupAccount:pwd:mnemonic:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>备份账户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)backupAccount:(NSString *)<em>address</em> pwd:(NSString *)<em>pwd</em> mnemonic:(NSString *)<em>mnemonic</em> success:(MBRWAccountOprationSuccessBlock)<em>success</em> failure:(MBRWFailureBlock)<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>address</code></th>
+						<td><p>账户地址</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pwd</code></th>
+						<td><p>校验密码</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mnemonic</code></th>
+						<td><p>校验助记词</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>操作成功</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>操作失败</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>备份账户</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Account.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/exportKeystore:pwd:ksPwd:success:failure:" title="exportKeystore:pwd:ksPwd:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/exportKeystore:pwd:ksPwd:success:failure:">+&nbsp;exportKeystore:pwd:ksPwd:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>导出keystore</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)exportKeystore:(NSString *)<em>address</em> pwd:(NSString *)<em>pwd</em> ksPwd:(NSString *)<em>ksPwd</em> success:(void ( ^ ) ( NSString *json ))<em>success</em> failure:(MBRWFailureBlock)<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>address</code></th>
+						<td><p>账户地址</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pwd</code></th>
+						<td><p>账户密码</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>ksPwd</code></th>
+						<td><p>keystory密码</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>导出成功</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>导出失败</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>导出keystore</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Account.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setAsDefaultAccount:pwd:success:failure:" title="setAsDefaultAccount:pwd:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setAsDefaultAccount:pwd:success:failure:">+&nbsp;setAsDefaultAccount:pwd:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>设为默认账户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setAsDefaultAccount:(NSString *)<em>address</em> pwd:(NSString *)<em>pwd</em> success:(MBRWAccountOprationSuccessBlock)<em>success</em> failure:(MBRWFailureBlock)<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>address</code></th>
+						<td><p>address</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pwd</code></th>
+						<td><p>pwd</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>操作成功</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>操作失败</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>设为默认账户</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Account.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/renameAccount:newName:pwd:success:failure:" title="renameAccount:newName:pwd:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/renameAccount:newName:pwd:success:failure:">+&nbsp;renameAccount:newName:pwd:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>重命名账户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)renameAccount:(NSString *)<em>name</em> newName:(NSString *)<em>newName</em> pwd:(NSString *)<em>pwd</em> success:(MBRWAccountOprationSuccessBlock)<em>success</em> failure:(MBRWFailureBlock)<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>账户名</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>newName</code></th>
+						<td><p>新名称</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pwd</code></th>
+						<td><p>交易密码</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>操作成功</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>操作失败</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>重命名账户</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Account.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getAccountWithName:" title="getAccountWithName:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getAccountWithName:">+&nbsp;getAccountWithName:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>查找账户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (MBRWAccount *)getAccountWithName:(NSString *)<em>name</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>名称</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/MBRWAccount.html">MBRWAccount</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>查找账户</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Account.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getAccountWithAddress:" title="getAccountWithAddress:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getAccountWithAddress:">+&nbsp;getAccountWithAddress:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>查找账户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (MBRWAccount *)getAccountWithAddress:(NSString *)<em>address</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>address</code></th>
+						<td><p>地址</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/MBRWAccount.html">MBRWAccount</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>查找账户</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Account.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getAllAccount" title="getAllAccount"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getAllAccount">+&nbsp;getAllAccount</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取所有账户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSArray *)getAllAccount</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>MBRWAccount数组</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>获取所有账户</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getDefaultAccount" title="getDefaultAccount"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getDefaultAccount">+&nbsp;getDefaultAccount</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取默认账户</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (MBRWAccount *)getDefaultAccount</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><a href="../Classes/MBRWAccount.html">MBRWAccount</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>获取默认账户</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Account.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/checkOprationWithPwd:" title="checkOprationWithPwd:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/checkOprationWithPwd:">+&nbsp;checkOprationWithPwd:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>密码校验</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSError *)checkOprationWithPwd:(NSString *)<em>pwd</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pwd</code></th>
+						<td><p>密码</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSError</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>密码校验</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRWWallet+Account.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2018 重庆面壁人. All rights reserved. Updated: 2018-06-07</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
