@@ -1,0 +1,6 @@
+framework module MBRWallet {
+  umbrella header "MBRWallet.h"
+
+  export *
+  module * { export * }
+}
