@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
 <head>
 	<meta charset="utf-8">
 
-	<title>MBRWPasswordTool Class Reference</title>
+	<title>MBRWWalletConfig Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -11,7 +9,7 @@
 </head>
 <body class="appledoc">
 	<header>
-		<div class="container" class="hide-in-xcode">
+		<div class="container">
 			
 			<h1 id="library-title">
 				<a href="../index.html">MBRWallet </a>
@@ -41,7 +39,9 @@
 							</div>
 
 							<select id="jump-to">
-	<option value="top">Jump To&#133;</option>
+	<option value="top">Jump To…</option>
+	
+	<option value="overview">Overview</option>
 	
 
 	
@@ -52,19 +52,19 @@
 
 	
 	
-
-	
-	<optgroup label="Class Methods">
+	<optgroup label="Properties">
 		
-		<option value="//api/name/getTransactionPwd">+ getTransactionPwd</option>
+		<option value="//api/name/apiHost">apiHost</option>
 		
-		<option value="//api/name/haveSetTransactionPwd">+ haveSetTransactionPwd</option>
+		<option value="//api/name/channel">channel</option>
 		
-		<option value="//api/name/setTransactionPwd:">+ setTransactionPwd:</option>
+		<option value="//api/name/jPushId">jPushId</option>
 		
-		<option value="//api/name/verifyTransactionPwd:">+ verifyTransactionPwd:</option>
+		<option value="//api/name/languageCode">languageCode</option>
 		
 	</optgroup>
+	
+
 	
 
 	
@@ -81,7 +81,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">MBRWPasswordTool Class Reference</h1>
+					<h1 class="title">MBRWWalletConfig Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -90,12 +90,20 @@
 	<td>NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>MBRWPasswordTool.h<br />MBRWPasswordTool.m</td>
+	<td>MBRWWallet.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>钱包环境配置类</p>
+					</div>
+					
+					
 
 					
 					
@@ -108,8 +116,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/setTransactionPwd:" title="setTransactionPwd:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setTransactionPwd:">+&nbsp;setTransactionPwd:</a></code>
+	<a name="//api/name/languageCode" title="languageCode"></a>
+	<h3 class="method-title"><code><a href="#//api/name/languageCode">-&nbsp;默认：zh_CN&nbsp;&nbsp;languageCode</a></code>
 </h3>
 
 	<div class="method-info">
@@ -118,27 +126,15 @@
 		<div class="method-info-container">
 			
 			
-			<div class="method-subsection brief-description">
-				<p>设置交易密码</p>
+			<div class="method-subsection brief-description" style="display: none;">
+				<p>默认：zh_CN</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (void)setTransactionPwd:(NSString *)<em>pwd</em></code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, nullable) NSString *languageCode</code></div>
 
 		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>pwd</code></th>
-						<td><p>密码明文</p></td>
-					</tr>
-				
-				</table>
-			</div>
 			
 
 			
@@ -148,7 +144,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>设置交易密码</p>
+				<p>默认：zh_CN</p>
 			</div>
 			
 
@@ -159,15 +155,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">MBRWPasswordTool.h</code></p>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/haveSetTransactionPwd" title="haveSetTransactionPwd"></a>
-	<h3 class="method-title"><code><a href="#//api/name/haveSetTransactionPwd">+&nbsp;haveSetTransactionPwd</a></code>
+	<a name="//api/name/channel" title="channel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/channel">-&nbsp;渠道号(必须)&nbsp;&nbsp;channel</a></code>
 </h3>
 
 	<div class="method-info">
@@ -176,22 +172,17 @@
 		<div class="method-info-container">
 			
 			
-			<div class="method-subsection brief-description">
-				<p>是否设置过交易密码</p>
+			<div class="method-subsection brief-description" style="display: none;">
+				<p>渠道号(必须)</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (BOOL)haveSetTransactionPwd</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, nonnull) NSString *channel</code></div>
 
 		    
 			
 
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>BOOL</p>
-			</div>
 			
 
 			
@@ -199,7 +190,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>是否设置过交易密码</p>
+				<p>渠道号(必须)</p>
 			</div>
 			
 
@@ -210,15 +201,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">MBRWPasswordTool.h</code></p>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/verifyTransactionPwd:" title="verifyTransactionPwd:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/verifyTransactionPwd:">+&nbsp;verifyTransactionPwd:</a></code>
+	<a name="//api/name/jPushId" title="jPushId"></a>
+	<h3 class="method-title"><code><a href="#//api/name/jPushId">-&nbsp;pushId&nbsp;&nbsp;jPushId</a></code>
 </h3>
 
 	<div class="method-info">
@@ -227,34 +218,17 @@
 		<div class="method-info-container">
 			
 			
-			<div class="method-subsection brief-description">
-				<p>验证交易密码</p>
+			<div class="method-subsection brief-description" style="display: none;">
+				<p>pushId</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (BOOL)verifyTransactionPwd:(NSString *)<em>pwd</em></code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, nullable) NSString *jPushId</code></div>
 
 		    
 			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>pwd</code></th>
-						<td><p>密码明文</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
 
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>YES = 一致</p>
-			</div>
 			
 
 			
@@ -262,7 +236,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>验证交易密码</p>
+				<p>pushId</p>
 			</div>
 			
 
@@ -273,15 +247,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">MBRWPasswordTool.h</code></p>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/getTransactionPwd" title="getTransactionPwd"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getTransactionPwd">+&nbsp;getTransactionPwd</a></code>
+	<a name="//api/name/apiHost" title="apiHost"></a>
+	<h3 class="method-title"><code><a href="#//api/name/apiHost">-&nbsp;主机域名(必须）&nbsp;&nbsp;apiHost</a></code>
 </h3>
 
 	<div class="method-info">
@@ -290,22 +264,17 @@
 		<div class="method-info-container">
 			
 			
-			<div class="method-subsection brief-description">
-				<p>获取SHA256后密文</p>
+			<div class="method-subsection brief-description" style="display: none;">
+				<p>主机域名(必须）</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSString *)getTransactionPwd</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, nonnull) NSString *apiHost</code></div>
 
 		    
 			
 
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>NSString</p>
-			</div>
 			
 
 			
@@ -313,7 +282,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>获取SHA256后密文</p>
+				<p>主机域名(必须）</p>
 			</div>
 			
 
@@ -324,7 +293,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">MBRWPasswordTool.h</code></p>
+				<p><code class="declared-in-ref">MBRWWallet.h</code></p>
 			</div>
 			
 			
@@ -345,7 +314,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 重庆面壁人. All rights reserved. Updated: 2018-06-07</p>
+						<p class="copyright">Copyright © 2018 重庆面壁人. All rights reserved. Updated: 2018-06-19</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
@@ -357,5 +326,5 @@
 	</article>
 
 	<script src="../js/script.js"></script>
+
 </body>
-</html>

@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html>
 <head>
 	<meta charset="utf-8">
 
@@ -11,7 +9,7 @@
 </head>
 <body class="appledoc">
 	<header>
-		<div class="container" class="hide-in-xcode">
+		<div class="container">
 			
 			<h1 id="library-title">
 				<a href="../index.html">MBRWallet </a>
@@ -41,7 +39,9 @@
 							</div>
 
 							<select id="jump-to">
-	<option value="top">Jump To&#133;</option>
+	<option value="top">Jump To…</option>
+	
+	<option value="overview">Overview</option>
 	
 
 	
@@ -58,19 +58,17 @@
 		
 		<option value="//api/name/accountName">accountName</option>
 		
-		<option value="//api/name/isDefault">isDefault</option>
-		
 	</optgroup>
 	
 
 	
 	<optgroup label="Class Methods">
 		
-		<option value="//api/name/accountWithMnemonic:name:">+ accountWithMnemonic:name:</option>
+		<option value="//api/name/accountWithKeystore:pwdKS:name:pwdSumary:callback:">+ accountWithKeystore:pwdKS:name:pwdSumary:callback:</option>
 		
-		<option value="//api/name/accountWithName:">+ accountWithName:</option>
+		<option value="//api/name/accountWithMnemonic:name:pwdSumary:">+ accountWithMnemonic:name:pwdSumary:</option>
 		
-		<option value="//api/name/createAccountWithName:ethAccount:">+ createAccountWithName:ethAccount:</option>
+		<option value="//api/name/accountWithName:pwdSumary:">+ accountWithName:pwdSumary:</option>
 		
 	</optgroup>
 	
@@ -78,31 +76,11 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/addCoin:">- addCoin:</option>
-		
-		<option value="//api/name/encryptWithPwdSummary:">- encryptWithPwdSummary:</option>
-		
-		<option value="//api/name/exportKeystoreWithPwdSummary:ksPwd:callback:">- exportKeystoreWithPwdSummary:ksPwd:callback:</option>
-		
 		<option value="//api/name/getCoinList">- getCoinList</option>
 		
 		<option value="//api/name/getCoinWithId:">- getCoinWithId:</option>
 		
 		<option value="//api/name/getEthereumCoin">- getEthereumCoin</option>
-		
-		<option value="//api/name/getMnemonicWithPwdSummary:">- getMnemonicWithPwdSummary:</option>
-		
-		<option value="//api/name/getthereumCoin">- getthereumCoin</option>
-		
-		<option value="//api/name/removeCoin:">- removeCoin:</option>
-		
-		<option value="//api/name/setCoinList:">- setCoinList:</option>
-		
-		<option value="//api/name/updateAccountCoinSelectSatate:">- updateAccountCoinSelectSatate:</option>
-		
-		<option value="//api/name/updateBalance:">- updateBalance:</option>
-		
-		<option value="//api/name/updateCoinList:">- updateCoinList:</option>
 		
 	</optgroup>
 	
@@ -128,12 +106,20 @@
 	<td>NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>MBRWAccount.h<br />MBRWAccount.m</td>
+	<td>MBRWAccount.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>钱包账户</p>
+					</div>
+					
+					
 
 					
 					
@@ -142,12 +128,12 @@
 						
 
 						
-						<h2 class="task-title">Other Methods</h2>
+						
 
 						<div class="task-list">
 							<div class="section-method">
 	<a name="//api/name/accountName" title="accountName"></a>
-	<h3 class="method-title"><code><a href="#//api/name/accountName">&nbsp;&nbsp;accountName</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/accountName">-&nbsp;账户名称&nbsp;&nbsp;accountName</a></code>
 </h3>
 
 	<div class="method-info">
@@ -156,13 +142,13 @@
 		<div class="method-info-container">
 			
 			
-			<div class="method-subsection brief-description">
+			<div class="method-subsection brief-description" style="display: none;">
 				<p>账户名称</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *accountName</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSString *accountName</code></div>
 
 		    
 			
@@ -193,7 +179,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/accountAddress" title="accountAddress"></a>
-	<h3 class="method-title"><code><a href="#//api/name/accountAddress">&nbsp;&nbsp;accountAddress</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/accountAddress">-&nbsp;账户地址&nbsp;&nbsp;accountAddress</a></code>
 </h3>
 
 	<div class="method-info">
@@ -202,7 +188,7 @@
 		<div class="method-info-container">
 			
 			
-			<div class="method-subsection brief-description">
+			<div class="method-subsection brief-description" style="display: none;">
 				<p>账户地址</p>
 			</div>
 			
@@ -238,8 +224,9 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/isDefault" title="isDefault"></a>
-	<h3 class="method-title"><code><a href="#//api/name/isDefault">&nbsp;&nbsp;isDefault</a></code>
+	<a name="//api/name/accountWithName:pwdSumary:" title="accountWithName:pwdSumary:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/accountWithName:pwdSumary:">-&nbsp;通过账户名创建一个新账户
+内部使用随机助记词创建Account&nbsp;accountWithName:pwdSumary:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -248,128 +235,14 @@
 		<div class="method-info-container">
 			
 			
-			<div class="method-subsection brief-description">
-				<p>是否为默认账户</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL isDefault</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>是否为默认账户</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">MBRWAccount.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/createAccountWithName:ethAccount:" title="createAccountWithName:ethAccount:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/createAccountWithName:ethAccount:">+&nbsp;createAccountWithName:ethAccount:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>创建账户</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (instancetype)createAccountWithName:(NSString *)<em>name</em> ethAccount:(Account *)<em>ethAccount</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>name</code></th>
-						<td><p>账户名</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>ethAccount</code></th>
-						<td><p><a href="#//api/name/ethAccount">ethAccount</a></p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>MBRWAccount</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>创建账户</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">MBRWAccount.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/accountWithName:" title="accountWithName:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/accountWithName:">+&nbsp;accountWithName:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>通过账户名创建一个账户
+			<div class="method-subsection brief-description" style="display: none;">
+				<p>通过账户名创建一个新账户
 内部使用随机助记词创建Account</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (instancetype)accountWithName:(NSString *)<em>name</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (instancetype)accountWithName:(NSString *)<em>name</em> pwdSumary:(NSString *)<em>pwdS</em></code></div>
 
 		    
 			
@@ -377,12 +250,17 @@
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
 				
-					<tr>
+					<tbody><tr>
 						<th scope="row" class="argument-name"><code>name</code></th>
 						<td><p>账户名</p></td>
 					</tr>
 				
-				</table>
+					<tr>
+						<th scope="row" class="argument-name"><code>pwdS</code></th>
+						<td><p>账户加密密码</p></td>
+					</tr>
+				
+				</tbody></table>
 			</div>
 			
 
@@ -398,7 +276,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>通过账户名创建一个账户
+				<p>通过账户名创建一个新账户
 内部使用随机助记词创建Account</p>
 			</div>
 			
@@ -417,8 +295,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/accountWithMnemonic:name:" title="accountWithMnemonic:name:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/accountWithMnemonic:name:">+&nbsp;accountWithMnemonic:name:</a></code>
+	<a name="//api/name/accountWithMnemonic:name:pwdSumary:" title="accountWithMnemonic:name:pwdSumary:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/accountWithMnemonic:name:pwdSumary:">-&nbsp;通过账户名和助记词创建账户&nbsp;accountWithMnemonic:name:pwdSumary:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -427,13 +305,13 @@
 		<div class="method-info-container">
 			
 			
-			<div class="method-subsection brief-description">
+			<div class="method-subsection brief-description" style="display: none;">
 				<p>通过账户名和助记词创建账户</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (instancetype)accountWithMnemonic:(NSString *)<em>mnemonic</em> name:(NSString *)<em>name</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (instancetype)accountWithMnemonic:(NSString *)<em>mnemonic</em> name:(NSString *)<em>name</em> pwdSumary:(NSString *)<em>pwdS</em></code></div>
 
 		    
 			
@@ -441,7 +319,7 @@
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
 				
-					<tr>
+					<tbody><tr>
 						<th scope="row" class="argument-name"><code>mnemonic</code></th>
 						<td><p>助记词</p></td>
 					</tr>
@@ -451,7 +329,12 @@
 						<td><p>账户名</p></td>
 					</tr>
 				
-				</table>
+					<tr>
+						<th scope="row" class="argument-name"><code>pwdS</code></th>
+						<td><p>账户加密密码</p></td>
+					</tr>
+				
+				</tbody></table>
 			</div>
 			
 
@@ -485,8 +368,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/encryptWithPwdSummary:" title="encryptWithPwdSummary:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/encryptWithPwdSummary:">&ndash;&nbsp;encryptWithPwdSummary:</a></code>
+	<a name="//api/name/accountWithKeystore:pwdKS:name:pwdSumary:callback:" title="accountWithKeystore:pwdKS:name:pwdSumary:callback:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/accountWithKeystore:pwdKS:name:pwdSumary:callback:">-&nbsp;通过账户名和keystory创建账户&nbsp;accountWithKeystore:pwdKS:name:pwdSumary:callback:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -495,15 +378,13 @@
 		<div class="method-info-container">
 			
 			
-			<div class="method-subsection brief-description">
-				<p>加密数据
-强调：（创建账户后需加密）
-优化：？</p>
+			<div class="method-subsection brief-description" style="display: none;">
+				<p>通过账户名和keystory创建账户</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (BOOL)encryptWithPwdSummary:(NSString *)<em>pwdSummary</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (void)accountWithKeystore:(NSString *)<em>keyStore</em> pwdKS:(NSString *)<em>pwdKS</em> name:(NSString *)<em>name</em> pwdSumary:(NSString *)<em>pwdS</em> callback:(void ( ^ ) ( MBRWAccount *account , NSError *NSError ))<em>callback</em></code></div>
 
 		    
 			
@@ -511,137 +392,24 @@
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
 				
-					<tr>
-						<th scope="row" class="argument-name"><code>pwdSummary</code></th>
-						<td><p>pwdSummary</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>加密数据
-强调：（创建账户后需加密）
-优化：？</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">MBRWAccount.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/getMnemonicWithPwdSummary:" title="getMnemonicWithPwdSummary:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getMnemonicWithPwdSummary:">&ndash;&nbsp;getMnemonicWithPwdSummary:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>获取助记词</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (NSString *)getMnemonicWithPwdSummary:(NSString *)<em>pwdSummary</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>pwdSummary</code></th>
-						<td><p>pwdSummary</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>NSString</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>获取助记词</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">MBRWAccount.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/exportKeystoreWithPwdSummary:ksPwd:callback:" title="exportKeystoreWithPwdSummary:ksPwd:callback:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/exportKeystoreWithPwdSummary:ksPwd:callback:">&ndash;&nbsp;exportKeystoreWithPwdSummary:ksPwd:callback:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>导出keystore</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)exportKeystoreWithPwdSummary:(NSString *)<em>pwdSummary</em> ksPwd:(NSString *)<em>ksPwd</em> callback:(void ( ^ ) ( NSString *json ))<em>callback</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>pwdSummary</code></th>
-						<td><p>账户密码摘要</p></td>
+					<tbody><tr>
+						<th scope="row" class="argument-name"><code>keyStore</code></th>
+						<td><p>keystore文本</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>ksPwd</code></th>
-						<td><p>keystory的密码，用以导入验证</p></td>
+						<th scope="row" class="argument-name"><code>pwdKS</code></th>
+						<td><p>keystore密码</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>账户名</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pwdS</code></th>
+						<td><p>账户加密密码</p></td>
 					</tr>
 				
 					<tr>
@@ -649,7 +417,7 @@
 						<td><p>结果回调</p></td>
 					</tr>
 				
-				</table>
+				</tbody></table>
 			</div>
 			
 
@@ -660,181 +428,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>导出keystore</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">MBRWAccount.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/setCoinList:" title="setCoinList:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setCoinList:">&ndash;&nbsp;setCoinList:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>设置币列表</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)setCoinList:(NSArray&lt;DCPBgCoin*&gt; *)<em>coinList</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>coinList</code></th>
-						<td><p>DCPBgCoin列表</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>设置币列表</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">MBRWAccount.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/addCoin:" title="addCoin:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/addCoin:">&ndash;&nbsp;addCoin:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>添加币</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)addCoin:(DCPBgCoin *)<em>coin</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>coin</code></th>
-						<td><p>DCPBgCoin</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>添加币</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">MBRWAccount.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/removeCoin:" title="removeCoin:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/removeCoin:">&ndash;&nbsp;removeCoin:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>移除币</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)removeCoin:(DCPBgCoin *)<em>coin</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>coin</code></th>
-						<td><p>DCPBgCoin</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>移除币</p>
+				<p>通过账户名和keystory创建账户</p>
 			</div>
 			
 
@@ -853,7 +447,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/getCoinList" title="getCoinList"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getCoinList">&ndash;&nbsp;getCoinList</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/getCoinList">-&nbsp;获取币列表&nbsp;getCoinList</a></code>
 </h3>
 
 	<div class="method-info">
@@ -862,13 +456,13 @@
 		<div class="method-info-container">
 			
 			
-			<div class="method-subsection brief-description">
+			<div class="method-subsection brief-description" style="display: none;">
 				<p>获取币列表</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSArray&lt;DCPBgCoin*&gt; *)getCoinList</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSArray&lt;MBRBgCoin*&gt; *)getCoinList</code></div>
 
 		    
 			
@@ -904,7 +498,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/getCoinWithId:" title="getCoinWithId:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getCoinWithId:">&ndash;&nbsp;getCoinWithId:</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/getCoinWithId:">-&nbsp;获取/查找币&nbsp;getCoinWithId:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -913,13 +507,13 @@
 		<div class="method-info-container">
 			
 			
-			<div class="method-subsection brief-description">
+			<div class="method-subsection brief-description" style="display: none;">
 				<p>获取/查找币</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (DCPBgCoin *)getCoinWithId:(NSString *)<em>coinId</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (MBRBgCoin *)getCoinWithId:(NSString *)<em>coinId</em></code></div>
 
 		    
 			
@@ -927,19 +521,19 @@
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
 				
-					<tr>
+					<tbody><tr>
 						<th scope="row" class="argument-name"><code>coinId</code></th>
 						<td><p>币id/地址</p></td>
 					</tr>
 				
-				</table>
+				</tbody></table>
 			</div>
 			
 
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>DCPBgCoin</p>
+				<p>MBRBgCoin</p>
 			</div>
 			
 
@@ -949,180 +543,6 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>获取/查找币</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">MBRWAccount.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/updateBalance:" title="updateBalance:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/updateBalance:">&ndash;&nbsp;updateBalance:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>更新币余额</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)updateBalance:(NSArray&lt;DCPBgCoin*&gt; *)<em>coinList</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>coinList</code></th>
-						<td><p>币列表</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>更新币余额</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">MBRWAccount.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/updateCoinList:" title="updateCoinList:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/updateCoinList:">&ndash;&nbsp;updateCoinList:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>更新币列表</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)updateCoinList:(NSArray&lt;DCPBgCoin*&gt; *)<em>coinList</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>coinList</code></th>
-						<td><p>币列表</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>更新币列表</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">MBRWAccount.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/updateAccountCoinSelectSatate:" title="updateAccountCoinSelectSatate:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/updateAccountCoinSelectSatate:">&ndash;&nbsp;updateAccountCoinSelectSatate:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>更新币的选中状态</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)updateAccountCoinSelectSatate:(DCPBgCoin *)<em>coin</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>coin</code></th>
-						<td><p>coin</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>更新币的选中状态</p>
 			</div>
 			
 
@@ -1141,7 +561,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/getEthereumCoin" title="getEthereumCoin"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getEthereumCoin">&ndash;&nbsp;getEthereumCoin</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/getEthereumCoin">-&nbsp;获取ethereum类型的币&nbsp;getEthereumCoin</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1150,13 +570,13 @@
 		<div class="method-info-container">
 			
 			
-			<div class="method-subsection brief-description">
+			<div class="method-subsection brief-description" style="display: none;">
 				<p>获取ethereum类型的币</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (DCPBgCoin *)getEthereumCoin</code></div>
+			<div class="method-subsection method-declaration"><code>- (MBRBgCoin *)getEthereumCoin</code></div>
 
 		    
 			
@@ -1185,65 +605,6 @@
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
 				<p><code class="declared-in-ref">MBRWAccount.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
-
-						
-						<h2 class="task-title">Other Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/getthereumCoin" title="getthereumCoin"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getthereumCoin">&ndash;&nbsp;getthereumCoin</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>获取ethereum类型的币</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (DCPBgCoin *)getthereumCoin</code></div>
-
-		    
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>币</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>获取ethereum类型的币</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">MBRWAccount.m</code></p>
 			</div>
 			
 			
@@ -1264,7 +625,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 重庆面壁人. All rights reserved. Updated: 2018-06-07</p>
+						<p class="copyright">Copyright © 2018 重庆面壁人. All rights reserved. Updated: 2018-06-19</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
@@ -1276,5 +637,5 @@
 	</article>
 
 	<script src="../js/script.js"></script>
+
 </body>
-</html>
