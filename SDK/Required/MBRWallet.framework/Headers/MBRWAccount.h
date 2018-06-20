@@ -19,6 +19,7 @@
     NSString* _accountAddress;
     NSString* _mnemonic;
     NSString* _privateKeyHex;
+    NSString* _privateKeyTouch;
     NSMutableArray<MBRBgCoin *>* _erc20List;
     BOOL _isDefault;
 }

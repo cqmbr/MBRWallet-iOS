@@ -57,9 +57,29 @@ typedef void(^MBRWFailureBlock)(NSError *error);
                      toAccountAddress:(NSString *)address
                              callBack:(void (^)(BOOL success))callBack;
 
-+ (NSString*)defaultEth;
-+ (NSString*)maxEth;
-+ (NSString*)minEth;
+/**
+ 矿工费默认值
+ 
+ @param coinId 币Id
+ @return 价格，单位：eth
+ */
++ (NSDecimalNumber*)defaultEthWithCoinId:(NSString*)coinId;
+
+/**
+ 矿工费最大值
+ 
+ @param coinId 币Id
+ @return 价格，单位：eth
+ */
++ (NSDecimalNumber*)maxEthWithCoinId:(NSString*)coinId;
+
+/**
+ 矿工费最小值
+ 
+ @param coinId 币Id
+ @return 价格，单位：eth
+ */
++ (NSDecimalNumber*)minEthWithCoinId:(NSString*)coinId;
 
 @end
 
