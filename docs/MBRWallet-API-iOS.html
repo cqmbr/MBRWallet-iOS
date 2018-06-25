@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>MBRWallet-API-iOS.html</title>
+  <meta name="generator" content="Haroopad 0.13.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>div.oembedall-githubrepos{border:1px solid #DDD;border-radius:4px;list-style-type:none;margin:0 0 10px;padding:8px 10px 0;font:13.34px/1.4 helvetica,arial,freesans,clean,sans-serif;width:452px;background-color:#fff}div.oembedall-githubrepos .oembedall-body{background:-moz-linear-gradient(center top,#FAFAFA,#EFEFEF);background:-webkit-gradient(linear,left top,left bottom,from(#FAFAFA),to(#EFEFEF));border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top:1px solid #EEE;margin-left:-10px;margin-top:8px;padding:5px 10px;width:100%}div.oembedall-githubrepos h3{font-size:14px;margin:0;padding-left:18px;white-space:nowrap}div.oembedall-githubrepos p.oembedall-description{color:#444;font-size:12px;margin:0 0 3px}div.oembedall-githubrepos p.oembedall-updated-at{color:#888;font-size:11px;margin:0}div.oembedall-githubrepos ul.oembedall-repo-stats{border:none;float:right;font-size:11px;font-weight:700;padding-left:15px;position:relative;z-index:5;margin:0}div.oembedall-githubrepos ul.oembedall-repo-stats li{border:none;color:#666;display:inline-block;list-style-type:none;margin:0!important}div.oembedall-githubrepos ul.oembedall-repo-stats li a{background-color:transparent;border:none;color:#666!important;background-position:5px -2px;background-repeat:no-repeat;border-left:1px solid #DDD;display:inline-block;height:21px;line-height:21px;padding:0 5px 0 23px}div.oembedall-githubrepos ul.oembedall-repo-stats li:first-child a{border-left:medium none;margin-right:-3px}div.oembedall-githubrepos ul.oembedall-repo-stats li a:hover{background:5px -27px no-repeat #4183C4;color:#FFF!important;text-decoration:none}div.oembedall-githubrepos ul.oembedall-repo-stats li:first-child a:hover{border-bottom-left-radius:3px;border-top-left-radius:3px}ul.oembedall-repo-stats li:last-child a:hover{border-bottom-right-radius:3px;border-top-right-radius:3px}span.oembedall-closehide{background-color:#aaa;border-radius:2px;cursor:pointer;margin-right:3px}div.oembedall-container{margin-top:5px;text-align:left}.oembedall-ljuser{font-weight:700}.oembedall-ljuser img{vertical-align:bottom;border:0;padding-right:1px}.oembedall-stoqembed{border-bottom:1px dotted #999;float:left;overflow:hidden;width:730px;line-height:1;background:#FFF;color:#000;font-family:Arial,Liberation Sans,DejaVu Sans,sans-serif;font-size:80%;text-align:left;margin:0;padding:0}.oembedall-stoqembed a{color:#07C;text-decoration:none;margin:0;padding:0}.oembedall-stoqembed a:hover{text-decoration:underline}.oembedall-stoqembed a:visited{color:#4A6B82}.oembedall-stoqembed h3{font-family:Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;font-size:130%;font-weight:700;margin:0;padding:0}.oembedall-stoqembed .oembedall-reputation-score{color:#444;font-size:120%;font-weight:700;margin-right:2px}.oembedall-stoqembed .oembedall-user-info{height:35px;width:185px}.oembedall-stoqembed .oembedall-user-info .oembedall-user-gravatar32{float:left;height:32px;width:32px}.oembedall-stoqembed .oembedall-user-info .oembedall-user-details{float:left;margin-left:5px;overflow:hidden;white-space:nowrap;width:145px}.oembedall-stoqembed .oembedall-question-hyperlink{font-weight:700}.oembedall-stoqembed .oembedall-stats{background:#EEE;margin:0 0 0 7px;padding:4px 7px 6px;width:58px}.oembedall-stoqembed .oembedall-statscontainer{float:left;margin-right:8px;width:86px}.oembedall-stoqembed .oembedall-votes{color:#555;padding:0 0 7px;text-align:center}.oembedall-stoqembed .oembedall-vote-count-post{font-size:240%;color:#808185;display:block;font-weight:700}.oembedall-stoqembed .oembedall-views{color:#999;padding-top:4px;text-align:center}.oembedall-stoqembed .oembedall-status{margin-top:-3px;padding:4px 0;text-align:center;background:#75845C;color:#FFF}.oembedall-stoqembed .oembedall-status strong{color:#FFF;display:block;font-size:140%}.oembedall-stoqembed .oembedall-summary{float:left;width:635px}.oembedall-stoqembed .oembedall-excerpt{line-height:1.2;margin:0;padding:0 0 5px}.oembedall-stoqembed .oembedall-tags{float:left;line-height:18px}.oembedall-stoqembed .oembedall-tags a:hover{text-decoration:none}.oembedall-stoqembed .oembedall-post-tag{background-color:#E0EAF1;border-bottom:1px solid #3E6D8E;border-right:1px solid #7F9FB6;color:#3E6D8E;font-size:90%;line-height:2.4;margin:2px 2px 2px 0;padding:3px 4px;text-decoration:none;white-space:nowrap}.oembedall-stoqembed .oembedall-post-tag:hover{background-color:#3E6D8E;border-bottom:1px solid #37607D;border-right:1px solid #37607D;color:#E0EAF1}.oembedall-stoqembed .oembedall-fr{float:right}.oembedall-stoqembed .oembedall-statsarrow{background-image:url(http://cdn.sstatic.net/stackoverflow/img/sprites.png?v=3);background-repeat:no-repeat;overflow:hidden;background-position:0 -435px;float:right;height:13px;margin-top:12px;width:7px}.oembedall-facebook1{border:1px solid #1A3C6C;padding:0;font:13.34px/1.4 verdana;width:500px}.oembedall-facebook2{background-color:#627add}.oembedall-facebook2 a{color:#e8e8e8;text-decoration:none}.oembedall-facebookBody{background-color:#fff;vertical-align:top;padding:5px}.oembedall-facebookBody .contents{display:inline-block;width:100%}.oembedall-facebookBody div img{float:left;margin-right:5px}div.oembedall-lanyard{-webkit-box-shadow:none;-webkit-transition-delay:0s;-webkit-transition-duration:.4000000059604645s;-webkit-transition-property:width;-webkit-transition-timing-function:cubic-bezier(0.42,0,.58,1);background-attachment:scroll;background-clip:border-box;background-color:transparent;background-image:none;background-origin:padding-box;border-width:0;box-shadow:none;color:#112644;display:block;float:left;font-family:'Trebuchet MS',Trebuchet,sans-serif;font-size:16px;height:253px;line-height:19px;margin:0;max-width:none;min-height:0;outline:#112644 0;overflow-x:visible;overflow-y:visible;padding:0;position:relative;text-align:left;vertical-align:baseline;width:804px}div.oembedall-lanyard .tagline{font-size:1.5em}div.oembedall-lanyard .wrapper{overflow:hidden;clear:both}div.oembedall-lanyard .split{float:left;display:inline}div.oembedall-lanyard .prominent-place .flag:active,div.oembedall-lanyard .prominent-place .flag:focus,div.oembedall-lanyard .prominent-place .flag:hover,div.oembedall-lanyard .prominent-place .flag:link,div.oembedall-lanyard .prominent-place .flag:visited{float:left;display:block;width:48px;height:48px;position:relative;top:-5px;margin-right:10px}div.oembedall-lanyard .place-context{font-size:.889em}div.oembedall-lanyard .prominent-place .sub-place{display:block}div.oembedall-lanyard .prominent-place{font-size:1.125em;line-height:1.1em;font-weight:400}div.oembedall-lanyard .main-date{color:#8CB4E0;font-weight:700;line-height:1.1}div.oembedall-lanyard .first{width:48.57%;margin:0 0 0 2.857%}.mermaid .label{color:#333}.node circle,.node polygon,.node rect{fill:#cde498;stroke:#13540c;stroke-width:1px}.edgePath .path{stroke:green;stroke-width:1.5px}.cluster rect{fill:#cdffb2;rx:40;stroke:#6eaa49;stroke-width:1px}.cluster text{fill:#333}.actor{stroke:#13540c;fill:#cde498}text.actor{fill:#000;stroke:none}.actor-line{stroke:grey}.messageLine0{stroke-width:1.5;stroke-dasharray:"2 2";marker-end:"url(#arrowhead)";stroke:#333}.messageLine1{stroke-width:1.5;stroke-dasharray:"2 2";stroke:#333}#arrowhead{fill:#333}#crosshead path{fill:#333!important;stroke:#333!important}.messageText{fill:#333;stroke:none}.labelBox{stroke:#326932;fill:#cde498}.labelText,.loopText{fill:#000;stroke:none}.loopLine{stroke-width:2;stroke-dasharray:"2 2";marker-end:"url(#arrowhead)";stroke:#326932}.note{stroke:#6eaa49;fill:#fff5ad}.noteText{fill:#000;stroke:none;font-family:'trebuchet ms',verdana,arial;font-size:14px}.section{stroke:none;opacity:.2}.section0,.section2{fill:#6eaa49}.section1,.section3{fill:#fff;opacity:.2}.sectionTitle0,.sectionTitle1,.sectionTitle2,.sectionTitle3{fill:#333}.sectionTitle{text-anchor:start;font-size:11px;text-height:14px}.grid .tick{stroke:lightgrey;opacity:.3;shape-rendering:crispEdges}.grid path{stroke-width:0}.today{fill:none;stroke:red;stroke-width:2px}.task{stroke-width:2}.taskText{text-anchor:middle;font-size:11px}.taskTextOutsideRight{fill:#000;text-anchor:start;font-size:11px}.taskTextOutsideLeft{fill:#000;text-anchor:end;font-size:11px}.taskText0,.taskText1,.taskText2,.taskText3{fill:#fff}.task0,.task1,.task2,.task3{fill:#487e3a;stroke:#13540c}.taskTextOutside0,.taskTextOutside1,.taskTextOutside2,.taskTextOutside3{fill:#000}.active0,.active1,.active2,.active3{fill:#cde498;stroke:#13540c}.activeText0,.activeText1,.activeText2,.activeText3{fill:#000!important}.done0,.done1,.done2,.done3{stroke:grey;fill:lightgrey;stroke-width:2}.doneText0,.doneText1,.doneText2,.doneText3{fill:#000!important}.crit0,.crit1,.crit2,.crit3{stroke:#f88;fill:red;stroke-width:2}.activeCrit0,.activeCrit1,.activeCrit2,.activeCrit3{stroke:#f88;fill:#cde498;stroke-width:2}.doneCrit0,.doneCrit1,.doneCrit2,.doneCrit3{stroke:#f88;fill:lightgrey;stroke-width:2;cursor:pointer;shape-rendering:crispEdges}.activeCritText0,.activeCritText1,.activeCritText2,.activeCritText3,.doneCritText0,.doneCritText1,.doneCritText2,.doneCritText3{fill:#000!important}.titleText{text-anchor:middle;font-size:18px;fill:#000}text{font-family:'trebuchet ms',verdana,arial;font-size:14px}html{height:100%}body{margin:0!important;padding:5px 20px 26px!important;background-color:#fff;font-family:"Lucida Grande","Segoe UI","Apple SD Gothic Neo","Malgun Gothic","Lucida Sans Unicode",Helvetica,Arial,sans-serif;font-size:.9em;overflow-x:hidden;overflow-y:auto}br,h1,h2,h3,h4,h5,h6{clear:both}hr.page{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x;border:0;height:3px;padding:0}hr.underscore{border-top-style:dashed!important}body >:first-child{margin-top:0!important}img.plugin{box-shadow:0 1px 3px rgba(0,0,0,.1);border-radius:3px}iframe{border:0}figure{-webkit-margin-before:0;-webkit-margin-after:0;-webkit-margin-start:0;-webkit-margin-end:0}kbd{border:1px solid #aaa;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;-moz-box-shadow:1px 2px 2px #ddd;-webkit-box-shadow:1px 2px 2px #ddd;box-shadow:1px 2px 2px #ddd;background-color:#f9f9f9;background-image:-moz-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:-o-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:-webkit-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:linear-gradient(top,#eee,#f9f9f9,#eee);padding:1px 3px;font-family:inherit;font-size:.85em}.oembeded .oembed_photo{display:inline-block}img[data-echo]{margin:25px 0;width:100px;height:100px;background:url(../img/ajax.gif) center center no-repeat #fff}.spinner{display:inline-block;width:10px;height:10px;margin-bottom:-.1em;border:2px solid rgba(0,0,0,.5);border-top-color:transparent;border-radius:100%;-webkit-animation:spin 1s infinite linear;animation:spin 1s infinite linear}.spinner:after{content:'';display:block;width:0;height:0;position:absolute;top:-6px;left:0;border:4px solid transparent;border-bottom-color:rgba(0,0,0,.5);-webkit-transform:rotate(45deg);transform:rotate(45deg)}@-webkit-keyframes spin{to{-webkit-transform:rotate(360deg)}}@keyframes spin{to{transform:rotate(360deg)}}p.toc{margin:0!important}p.toc ul{padding-left:10px}p.toc>ul{padding:10px;margin:0 10px;display:inline-block;border:1px solid #ededed;border-radius:5px}p.toc li,p.toc ul{list-style-type:none}p.toc li{width:100%;padding:0;overflow:hidden}p.toc li a::after{content:"."}p.toc li a:before{content:"• "}p.toc h5{text-transform:uppercase}p.toc .title{float:left;padding-right:3px}p.toc .number{margin:0;float:right;padding-left:3px;background:#fff;display:none}input.task-list-item{margin-left:-1.62em}.markdown{font-family:"Hiragino Sans GB","Microsoft YaHei",STHeiti,SimSun,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",'Segoe UI',AppleSDGothicNeo-Medium,'Malgun Gothic',Verdana,Tahoma,sans-serif;padding:20px}.markdown a{text-decoration:none;vertical-align:baseline}.markdown a:hover{text-decoration:underline}.markdown h1{font-size:2.2em;font-weight:700;margin:1.5em 0 1em}.markdown h2{font-size:1.8em;font-weight:700;margin:1.275em 0 .85em}.markdown h3{font-size:1.6em;font-weight:700;margin:1.125em 0 .75em}.markdown h4{font-size:1.4em;font-weight:700;margin:.99em 0 .66em}.markdown h5{font-size:1.2em;font-weight:700;margin:.855em 0 .57em}.markdown h6{font-size:1em;font-weight:700;margin:.75em 0 .5em}.markdown h1+p,.markdown h1:first-child,.markdown h2+p,.markdown h2:first-child,.markdown h3+p,.markdown h3:first-child,.markdown h4+p,.markdown h4:first-child,.markdown h5+p,.markdown h5:first-child,.markdown h6+p,.markdown h6:first-child{margin-top:0}.markdown hr{border:1px solid #ccc}.markdown p{margin:1em 0;word-wrap:break-word}.markdown ol{list-style-type:decimal}.markdown li{display:list-item;line-height:1.4em}.markdown blockquote{margin:1em 20px}.markdown blockquote>:first-child{margin-top:0}.markdown blockquote>:last-child{margin-bottom:0}.markdown blockquote cite:before{content:'\2014 \00A0'}.markdown .code{border-radius:3px;word-wrap:break-word}.markdown pre{border-radius:3px;word-wrap:break-word;border:1px solid #ccc;overflow:auto;padding:.5em}.markdown pre code{border:0;display:block}.markdown pre>code{font-family:Consolas,Inconsolata,Courier,monospace;font-weight:700;white-space:pre;margin:0}.markdown code{border-radius:3px;word-wrap:break-word;border:1px solid #ccc;padding:0 5px;margin:0 2px}.markdown img{max-width:100%}.markdown mark{color:#000;background-color:#fcf8e3}.markdown table{padding:0;border-collapse:collapse;border-spacing:0;margin-bottom:16px}.markdown table tr td,.markdown table tr th{border:1px solid #ccc;margin:0;padding:6px 13px}.markdown table tr th{font-weight:700}.markdown table tr th>:first-child{margin-top:0}.markdown table tr th>:last-child{margin-bottom:0}.markdown table tr td>:first-child{margin-top:0}.markdown table tr td>:last-child{margin-bottom:0}@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700);.haroopad{padding:20px;color:#222;font-size:15px;font-family:"Roboto Condensed",Tauri,"Hiragino Sans GB","Microsoft YaHei",STHeiti,SimSun,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",'Segoe UI',AppleSDGothicNeo-Medium,'Malgun Gothic',Verdana,Tahoma,sans-serif;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}.haroopad a{color:#3269a0}.haroopad a:hover{color:#4183c4}.haroopad h2{border-bottom:1px solid #e6e6e6}.haroopad h6{color:#777}.haroopad hr{border:1px solid #e6e6e6}.haroopad blockquote>code,.haroopad h1>code,.haroopad h2>code,.haroopad h3>code,.haroopad h4>code,.haroopad h5>code,.haroopad h6>code,.haroopad li>code,.haroopad p>code,.haroopad td>code{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:85%;background-color:rgba(0,0,0,.02);padding:.2em .5em;border:1px solid #efefef}.haroopad pre>code{font-size:1em;letter-spacing:-1px;font-weight:700}.haroopad blockquote{border-left:4px solid #e6e6e6;padding:0 15px;color:#777}.haroopad table{background-color:#fafafa}.haroopad table tr td,.haroopad table tr th{border:1px solid #e6e6e6}.haroopad table tr:nth-child(2n){background-color:#f2f2f2}.hljs{display:block;overflow-x:auto;padding:.5em;background:#fdf6e3;color:#657b83;-webkit-text-size-adjust:none}.diff .hljs-header,.hljs-comment,.hljs-doctype,.hljs-javadoc,.hljs-pi,.lisp .hljs-string{color:#93a1a1}.css .hljs-tag,.hljs-addition,.hljs-keyword,.hljs-request,.hljs-status,.hljs-winutils,.method,.nginx .hljs-title{color:#859900}.hljs-command,.hljs-dartdoc,.hljs-hexcolor,.hljs-link_url,.hljs-number,.hljs-phpdoc,.hljs-regexp,.hljs-rules .hljs-value,.hljs-string,.hljs-tag .hljs-value,.tex .hljs-formula{color:#2aa198}.css .hljs-function,.hljs-built_in,.hljs-chunk,.hljs-decorator,.hljs-id,.hljs-identifier,.hljs-localvars,.hljs-title,.vhdl .hljs-literal{color:#268bd2}.hljs-attribute,.hljs-class .hljs-title,.hljs-constant,.hljs-link_reference,.hljs-parent,.hljs-type,.hljs-variable,.lisp .hljs-body,.smalltalk .hljs-number{color:#b58900}.css .hljs-pseudo,.diff .hljs-change,.hljs-attr_selector,.hljs-cdata,.hljs-header,.hljs-pragma,.hljs-preprocessor,.hljs-preprocessor .hljs-keyword,.hljs-shebang,.hljs-special,.hljs-subst,.hljs-symbol,.hljs-symbol .hljs-string{color:#cb4b16}.hljs-deletion,.hljs-important{color:#dc322f}.hljs-link_label{color:#6c71c4}.tex .hljs-formula{background:#eee8d5}.MathJax_Hover_Frame{border-radius:.25em;-webkit-border-radius:.25em;-moz-border-radius:.25em;-khtml-border-radius:.25em;box-shadow:0 0 15px #83A;-webkit-box-shadow:0 0 15px #83A;-moz-box-shadow:0 0 15px #83A;-khtml-box-shadow:0 0 15px #83A;border:1px solid #A6D!important;display:inline-block;position:absolute}.MathJax_Hover_Arrow{position:absolute;width:15px;height:11px;cursor:pointer}#MathJax_About{position:fixed;left:50%;width:auto;text-align:center;border:3px outset;padding:1em 2em;background-color:#DDD;color:#000;cursor:default;font-family:message-box;font-size:120%;font-style:normal;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;z-index:201;border-radius:15px;-webkit-border-radius:15px;-moz-border-radius:15px;-khtml-border-radius:15px;box-shadow:0 10px 20px gray;-webkit-box-shadow:0 10px 20px gray;-moz-box-shadow:0 10px 20px gray;-khtml-box-shadow:0 10px 20px gray;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}.MathJax_Menu{position:absolute;background-color:#fff;color:#000;width:auto;padding:5px 0;border:1px solid #CCC;margin:0;cursor:default;font:menu;text-align:left;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;z-index:201;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;-khtml-border-radius:5px;box-shadow:0 10px 20px gray;-webkit-box-shadow:0 10px 20px gray;-moz-box-shadow:0 10px 20px gray;-khtml-box-shadow:0 10px 20px gray;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}.MathJax_MenuItem{padding:1px 2em;background:0 0}.MathJax_MenuArrow{position:absolute;right:.5em;color:#666}.MathJax_MenuActive .MathJax_MenuArrow{color:#fff}.MathJax_MenuArrow.RTL{left:.5em;right:auto}.MathJax_MenuCheck{position:absolute;left:.7em}.MathJax_MenuCheck.RTL{right:.7em;left:auto}.MathJax_MenuRadioCheck{position:absolute;left:.7em}.MathJax_MenuRadioCheck.RTL{right:.7em;left:auto}.MathJax_MenuLabel{padding:1px 2em 3px 1.33em;font-style:italic}.MathJax_MenuRule{border-top:1px solid #DDD;margin:4px 3px}.MathJax_MenuDisabled{color:GrayText}.MathJax_MenuActive{background-color:#606872;color:#fff}.MathJax_Menu_Close{position:absolute;width:31px;height:31px;top:-15px;left:-15px}#MathJax_Zoom{position:absolute;background-color:#F0F0F0;overflow:auto;display:block;z-index:301;padding:.5em;border:1px solid #000;margin:0;font-weight:400;font-style:normal;text-align:left;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;box-shadow:5px 5px 15px #AAA;-webkit-box-shadow:5px 5px 15px #AAA;-moz-box-shadow:5px 5px 15px #AAA;-khtml-box-shadow:5px 5px 15px #AAA;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}#MathJax_ZoomOverlay{position:absolute;left:0;top:0;z-index:300;display:inline-block;width:100%;height:100%;border:0;padding:0;margin:0;background-color:#fff;opacity:0;filter:alpha(opacity=0)}#MathJax_ZoomFrame{position:relative;display:inline-block;height:0;width:0}#MathJax_ZoomEventTrap{position:absolute;left:0;top:0;z-index:302;display:inline-block;border:0;padding:0;margin:0;background-color:#fff;opacity:0;filter:alpha(opacity=0)}.MathJax_Preview{color:#888}#MathJax_Message{position:fixed;left:1px;bottom:2px;background-color:#E6E6E6;border:1px solid #959595;margin:0;padding:2px 8px;z-index:102;color:#000;font-size:80%;width:auto;white-space:nowrap}#MathJax_MSIE_Frame{position:absolute;top:0;left:0;width:0;z-index:101;border:0;margin:0;padding:0}.MathJax_Error{color:#C00;font-style:italic}footer{position:fixed;font-size:.8em;text-align:right;bottom:0;margin-left:-25px;height:20px;width:100%}</style>
+</head>
+<body class="markdown haroopad">
+<ul>
+<li><a href="#sdk集成">SDK集成</a><ul>
+<li><a href="#使用说明">使用说明</a></li><li><a href="#初始化">初始化</a><ul>
+<li><a href="#初始化方法方法">初始化方法</a></li><li><a href="#参数">参数</a><ul>
+<li><a href="#MBRWWalletConfig">MBRWWalletConfig</a></li></ul>
+</li></ul>
+</li></ul>
+</li><li><a href="#sdk接口文档">SDK接口文档</a><ul>
+<li><a href="#密码接口">密码接口</a><ul>
+<li><a href="#设置交易密码">设置交易密码</a></li><li><a href="#修改密码">修改密码</a></li><li><a href="#是否已设置密码">是否已设置密码</a></li><li><a href="#密码是否相同">密码是否相同</a></li><li><a href="#设置密码提示">设置密码提示</a></li><li><a href="#获取密码提示">获取密码提示</a></li></ul>
+</li><li><a href="#币接口">币接口</a><ul>
+<li><a href="#同步币列表">同步币列表</a></li><li><a href="#获取所有币列表">获取所有币列表</a></li><li><a href="#获取必选币列表">获取必选币列表</a></li><li><a href="#获取非必选币列表">获取非必选币列表</a></li><li><a href="#获取矿工费默认值">获取矿工费默认值</a></li><li><a href="#获取矿工费最大值">获取矿工费最大值</a></li><li><a href="#获取矿工费最小值">获取矿工费最小值</a></li></ul>
+</li><li><a href="#账户接口">账户接口</a><ul>
+<li><a href="#创建新账户">创建新账户</a></li><li><a href="#助记词导入账户">助记词导入账户</a></li><li><a href="#keystore导入账户">keystore导入账户</a></li><li><a href="#删除账户">删除账户</a></li><li><a href="#获取账户助记词">获取账户助记词</a></li><li><a href="#是否已备份账户">是否已备份账户</a></li><li><a href="#备份账户">备份账户</a></li><li><a href="#导出keystore">导出keystore</a></li><li><a href="#设为默认账户">设为默认账户</a></li><li><a href="#重命名账户">重命名账户</a></li><li><a href="#获取所有账户">获取所有账户</a></li><li><a href="#获取默认账户">获取默认账户</a></li><li><a href="#查找账户">查找账户</a></li><li><a href="#同步账户余额信息">同步账户余额信息</a></li><li><a href="#更新账户中币的选中状态">更新账户中币的选中状态</a></li></ul>
+</li><li><a href="#交易接口">交易接口</a><ul>
+<li><a href="#密码支付">密码支付</a></li><li><a href="#密码转账">密码转账</a></li></ul>
+</li></ul>
+</li><li><a href="#错误码">错误码</a></li></ul><p><!-- /TOC --></p><h2 id="sdk集成"><a name="sdk集成" href="#sdk集成"></a>SDK集成</h2><h3 id="使用说明"><a name="使用说明" href="#使用说明"></a>使用说明</h3><ul>
+<li>工具：XCode、CocoaPods</li><li>配置：在工程的Podfile文件里面添加以下代码：<pre><code data-origin="<pre><code>pod 'MBRWallet'
+</code></pre>">pod 'MBRWallet'
+</code></pre>保存并执行pod install,然后用后缀为.xcworkspace的文件打开工程。</li></ul><h3 id="初始化"><a name="初始化" href="#初始化"></a>初始化</h3><p>在使用钱包功能之前必须对钱包sdk进行初始化。<br>建议在AppDelegate.m的application:didFinishLaunchingWithOptions:方法中初始化。</p><h4 id="初始化方法"><a name="初始化方法" href="#初始化方法"></a>初始化方法</h4><pre><code data-origin="<pre><code>+(void)setupWithConfig:(MBRWWalletConfig*)config
+</code></pre>">+(void)setupWithConfig:(MBRWWalletConfig*)config
+</code></pre><h4 id="参数"><a name="参数" href="#参数"></a>参数</h4><h5 id="mbrwwalletconfig"><a name="mbrwwalletconfig" href="#mbrwwalletconfig"></a>MBRWWalletConfig</h5><table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>languageCode</td>
+<td>语言码</td>
+<td>可选项，默认为中文（可选值见languageCode说明）</td>
+</tr>
+<tr>
+<td>channel</td>
+<td>渠道号</td>
+<td>必选项，渠道号联系服务端人员分配</td>
+</tr>
+<tr>
+<td>apiHost</td>
+<td>服务端地址</td>
+<td>可选项，不填为默认钱包地址</td>
+</tr>
+</tbody>
+</table><p>languageCode可选值</p><table>
+<thead>
+<tr>
+<th>语言码</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>zh_CN</td>
+<td>中文</td>
+</tr>
+<tr>
+<td>zh_TW</td>
+<td>繁体中文</td>
+</tr>
+<tr>
+<td>en_US</td>
+<td>英文</td>
+</tr>
+<tr>
+<td>ja_JP</td>
+<td>日文</td>
+</tr>
+<tr>
+<td>ko_KR</td>
+<td>韩文</td>
+</tr>
+</tbody>
+</table><h2 id="sdk接口文档"><a name="sdk接口文档" href="#sdk接口文档"></a>SDK接口文档</h2><h3 id="密码接口"><a name="密码接口" href="#密码接口"></a>密码接口</h3><h4 id="设置交易密码"><a name="设置交易密码" href="#设置交易密码"></a>设置交易密码</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 设置交易密码
+
+ @param pwd 密码
+ @param err 错误
+ */
++ (void)setPassword:(NSString*)pwd error:(NSError *__autoreleasing *)err;
+</code></pre>"><span class="hljs-javadoc">/**
+ 设置交易密码
+
+<span class="hljs-javadoctag"> @param</span> pwd 密码
+<span class="hljs-javadoctag"> @param</span> err 错误
+ */</span>
++ (<span class="hljs-keyword">void</span>)setPassword:(NSString*)pwd error:(NSError *<span class="hljs-number">__</span>autoreleasing *)err;
+</code></pre><h4 id="修改密码"><a name="修改密码" href="#修改密码"></a>修改密码</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 修改密码
+
+ @param oldPwd 旧密码
+ @param newPwd 新密码
+ @param success 修改成功回调
+ @param failure 修改失败回调
+ */
++ (void)modifyPasswordWithOldPwd:(NSString *)oldPwd
+                          newPwd:(NSString*)newPwd
+                         success:(void (^)(void))success
+                         failure:(MBRWFailureBlock)failure;
+</code></pre>"><span class="hljs-javadoc">/**
+ 修改密码
+
+<span class="hljs-javadoctag"> @param</span> oldPwd 旧密码
+<span class="hljs-javadoctag"> @param</span> newPwd 新密码
+<span class="hljs-javadoctag"> @param</span> success 修改成功回调
+<span class="hljs-javadoctag"> @param</span> failure 修改失败回调
+ */</span>
++ (<span class="hljs-keyword">void</span>)modifyPasswordWithOldPwd:(NSString *)oldPwd
+                          newPwd:(NSString*)newPwd
+                         success:(<span class="hljs-keyword">void</span> (^)(<span class="hljs-keyword">void</span>))success
+                         failure:(MBRWFailureBlock)failure;
+</code></pre><h4 id="是否已设置密码"><a name="是否已设置密码" href="#是否已设置密码"></a>是否已设置密码</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 是否已设置密码
+ - 使用账户操作等需要密码权限校验的接口前应该先设置密码
+ - 设置密码接口调用：[MBRWWallet setPassword:pwd error:&amp;amp;error];
+
+ @return YES=已设置；NO=未设置
+ */
++ (BOOL)haveSetPassword;
+</code></pre>"><span class="hljs-javadoc">/**
+ 是否已设置密码
+ - 使用账户操作等需要密码权限校验的接口前应该先设置密码
+ - 设置密码接口调用：[MBRWWallet setPassword:pwd error:&amp;error];
+
+<span class="hljs-javadoctag"> @return</span> YES=已设置；NO=未设置
+ */</span>
++ (BOOL)haveSetPassword;
+</code></pre><h4 id="密码是否相同"><a name="密码是否相同" href="#密码是否相同"></a>密码是否相同</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 密码是否相同（校验传入密码是否与设置的密码相等）
+
+ @return YES = 相等；NO = 不相等
+ */
++ (BOOL)isSamePassword:(NSString*)pwd;
+</code></pre>"><span class="hljs-javadoc">/**
+ 密码是否相同（校验传入密码是否与设置的密码相等）
+
+<span class="hljs-javadoctag"> @return</span> YES = 相等；NO = 不相等
+ */</span>
++ (BOOL)isSamePassword:(NSString*)pwd;
+</code></pre><h4 id="设置密码提示"><a name="设置密码提示" href="#设置密码提示"></a>设置密码提示</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 设置密码提示
+
+ @param hint 密码提示文本
+ */
++ (void)setPasswardHint:(NSString*)hint;
+</code></pre>"><span class="hljs-javadoc">/**
+ 设置密码提示
+
+<span class="hljs-javadoctag"> @param</span> hint 密码提示文本
+ */</span>
++ (<span class="hljs-keyword">void</span>)setPasswardHint:(NSString*)hint;
+</code></pre><h4 id="获取密码提示"><a name="获取密码提示" href="#获取密码提示"></a>获取密码提示</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 获取密码提示
+
+ @return 密码提示文本
+ */
++ (NSString*)getPasswordHint;
+</code></pre>"><span class="hljs-javadoc">/**
+ 获取密码提示
+
+<span class="hljs-javadoctag"> @return</span> 密码提示文本
+ */</span>
++ (NSString*)getPasswordHint;
+</code></pre><h3 id="币接口"><a name="币接口" href="#币接口"></a>币接口</h3><h4 id="同步币列表"><a name="同步币列表" href="#同步币列表"></a>同步币列表</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 同步币列表
+
+ @param callBack 结果回调（success=YES:同步成功）
+
+ */
++ (void)syncAllERC20CoinList:(void (^)(BOOL success))callBack;
+</code></pre>"><span class="hljs-javadoc">/**
+ 同步币列表
+
+<span class="hljs-javadoctag"> @param</span> callBack 结果回调（success=YES:同步成功）
+
+ */</span>
++ (<span class="hljs-keyword">void</span>)syncAllERC20CoinList:(<span class="hljs-keyword">void</span> (^)(BOOL success))callBack;
+</code></pre><h4 id="获取所有币列表"><a name="获取所有币列表" href="#获取所有币列表"></a>获取所有币列表</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 获取所有币列表
+
+ @return 币数组
+ */
++ (NSArray&amp;lt;MBRBgCoin*&amp;gt;*)getAllCoins;
+</code></pre>"><span class="hljs-javadoc">/**
+ 获取所有币列表
+
+<span class="hljs-javadoctag"> @return</span> 币数组
+ */</span>
++ (NSArray&lt;MBRBgCoin*&gt;*)getAllCoins;
+</code></pre><h4 id="获取必选币列表"><a name="获取必选币列表" href="#获取必选币列表"></a>获取必选币列表</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 获取必选币列表
+
+ @return 币数组
+ */
++ (NSArray&amp;lt;MBRBgCoin*&amp;gt;*)getForceCoins;
+</code></pre>"><span class="hljs-javadoc">/**
+ 获取必选币列表
+
+<span class="hljs-javadoctag"> @return</span> 币数组
+ */</span>
++ (NSArray&lt;MBRBgCoin*&gt;*)getForceCoins;
+</code></pre><h4 id="获取非必选币列表"><a name="获取非必选币列表" href="#获取非必选币列表"></a>获取非必选币列表</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 获取非必选币列表
+
+ @return 币数组
+ */
++ (NSArray&amp;lt;MBRBgCoin*&amp;gt;*)getNomalCoins;
+</code></pre>"><span class="hljs-javadoc">/**
+ 获取非必选币列表
+
+<span class="hljs-javadoctag"> @return</span> 币数组
+ */</span>
++ (NSArray&lt;MBRBgCoin*&gt;*)getNomalCoins;
+</code></pre><h4 id="获取矿工费默认值"><a name="获取矿工费默认值" href="#获取矿工费默认值"></a>获取矿工费默认值</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 获取矿工费默认值
+
+ @param coinId 币Id
+ @return 价格（转换后的价格：单位：eth)
+ */
++ (NSDecimalNumber*)defaultEthWithCoinId:(NSString*)coinId;
+</code></pre>"><span class="hljs-javadoc">/**
+ 获取矿工费默认值
+
+<span class="hljs-javadoctag"> @param</span> coinId 币Id
+<span class="hljs-javadoctag"> @return</span> 价格（转换后的价格：单位：eth)
+ */</span>
++ (NSDecimalNumber*)defaultEthWithCoinId:(NSString*)coinId;
+</code></pre><h4 id="获取矿工费最大值"><a name="获取矿工费最大值" href="#获取矿工费最大值"></a>获取矿工费最大值</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 矿工费最大值
+
+ @param coinId 币Id
+ @return 价格（转换后的价格：单位：eth)
+ */
++ (NSDecimalNumber*)maxEthWithCoinId:(NSString*)coinId;
+</code></pre>"><span class="hljs-javadoc">/**
+ 矿工费最大值
+
+<span class="hljs-javadoctag"> @param</span> coinId 币Id
+<span class="hljs-javadoctag"> @return</span> 价格（转换后的价格：单位：eth)
+ */</span>
++ (NSDecimalNumber*)maxEthWithCoinId:(NSString*)coinId;
+</code></pre><h4 id="获取矿工费最小值"><a name="获取矿工费最小值" href="#获取矿工费最小值"></a>获取矿工费最小值</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 矿工费最小值
+
+ @param coinId 币Id
+ @return 价格（转换后的价格：单位：eth)
+ */
++ (NSDecimalNumber*)minEthWithCoinId:(NSString*)coinId;
+</code></pre>"><span class="hljs-javadoc">/**
+ 矿工费最小值
+
+<span class="hljs-javadoctag"> @param</span> coinId 币Id
+<span class="hljs-javadoctag"> @return</span> 价格（转换后的价格：单位：eth)
+ */</span>
++ (NSDecimalNumber*)minEthWithCoinId:(NSString*)coinId;
+</code></pre><h3 id="账户接口"><a name="账户接口" href="#账户接口"></a>账户接口</h3><h4 id="创建新账户"><a name="创建新账户" href="#创建新账户"></a>创建新账户</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 创建新账户
+
+ @param name 账户名称
+ @param pwd 交易密码
+ @param success 操作成功回调
+ @param failure 操作失败回调
+ */
++ (void)addNewAccountWithName:(NSString*)name
+                          pwd:(NSString *)pwd
+                      success:(MBRWAccountOprationSuccessBlock)success
+                      failure:(MBRWFailureBlock)failure;
+</code></pre>"><span class="hljs-javadoc">/**
+ 创建新账户
+
+<span class="hljs-javadoctag"> @param</span> name 账户名称
+<span class="hljs-javadoctag"> @param</span> pwd 交易密码
+<span class="hljs-javadoctag"> @param</span> success 操作成功回调
+<span class="hljs-javadoctag"> @param</span> failure 操作失败回调
+ */</span>
++ (<span class="hljs-keyword">void</span>)addNewAccountWithName:(NSString*)name
+                          pwd:(NSString *)pwd
+                      success:(MBRWAccountOprationSuccessBlock)success
+                      failure:(MBRWFailureBlock)failure;
+</code></pre><h4 id="助记词导入账户"><a name="助记词导入账户" href="#助记词导入账户"></a>助记词导入账户</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 助记词导入账户
+
+ @param mnemonic 助记词
+ @param pwd 交易
+ @param name 账户名称
+ @param success 操作成功回调
+ @param failure 操作失败回调
+ */
++ (void)importAccountByMnemonic:(NSString*)mnemonic
+                            pwd:(NSString*)pwd
+                           name:(NSString*)name
+                        success:(MBRWAccountOprationSuccessBlock)success
+                        failure:(MBRWFailureBlock)failure;
+</code></pre>"><span class="hljs-javadoc">/**
+ 助记词导入账户
+
+<span class="hljs-javadoctag"> @param</span> mnemonic 助记词
+<span class="hljs-javadoctag"> @param</span> pwd 交易
+<span class="hljs-javadoctag"> @param</span> name 账户名称
+<span class="hljs-javadoctag"> @param</span> success 操作成功回调
+<span class="hljs-javadoctag"> @param</span> failure 操作失败回调
+ */</span>
++ (<span class="hljs-keyword">void</span>)importAccountByMnemonic:(NSString*)mnemonic
+                            pwd:(NSString*)pwd
+                           name:(NSString*)name
+                        success:(MBRWAccountOprationSuccessBlock)success
+                        failure:(MBRWFailureBlock)failure;
+</code></pre><h4 id="keystore导入账户"><a name="keystore导入账户" href="#keystore导入账户"></a>keystore导入账户</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ keystore导入账户
+
+ @param keyStore keystore
+ @param pwd 密码
+ @param pwdKS keystore密码
+ @param name 账户名称
+ @param success 操作成功回调
+ @param failure 操作失败回调
+ */
++ (void)importAccountByKeystore:(NSString*)keyStore
+                            pwd:(NSString*)pwd
+                          pwdKS:(NSString*)pwdKS
+                           name:(NSString*)name
+                        success:(MBRWAccountOprationSuccessBlock)success
+                        failure:(MBRWFailureBlock)failure;
+</code></pre>"><span class="hljs-javadoc">/**
+ keystore导入账户
+
+<span class="hljs-javadoctag"> @param</span> keyStore keystore
+<span class="hljs-javadoctag"> @param</span> pwd 密码
+<span class="hljs-javadoctag"> @param</span> pwdKS keystore密码
+<span class="hljs-javadoctag"> @param</span> name 账户名称
+<span class="hljs-javadoctag"> @param</span> success 操作成功回调
+<span class="hljs-javadoctag"> @param</span> failure 操作失败回调
+ */</span>
++ (<span class="hljs-keyword">void</span>)importAccountByKeystore:(NSString*)keyStore
+                            pwd:(NSString*)pwd
+                          pwdKS:(NSString*)pwdKS
+                           name:(NSString*)name
+                        success:(MBRWAccountOprationSuccessBlock)success
+                        failure:(MBRWFailureBlock)failure;
+</code></pre><h4 id="删除账户"><a name="删除账户" href="#删除账户"></a>删除账户</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 删除账户
+
+ @param name 账户名
+ @param pwd 密码
+ @param success 操作成功回调
+ @param failure 操作失败回调
+ */
++ (void)removeAccount:(NSString*)name
+                  pwd:(NSString*)pwd
+              success:(MBRWAccountOprationSuccessBlock)success
+              failure:(MBRWFailureBlock)failure;
+</code></pre>"><span class="hljs-javadoc">/**
+ 删除账户
+
+<span class="hljs-javadoctag"> @param</span> name 账户名
+<span class="hljs-javadoctag"> @param</span> pwd 密码
+<span class="hljs-javadoctag"> @param</span> success 操作成功回调
+<span class="hljs-javadoctag"> @param</span> failure 操作失败回调
+ */</span>
++ (<span class="hljs-keyword">void</span>)removeAccount:(NSString*)name
+                  pwd:(NSString*)pwd
+              success:(MBRWAccountOprationSuccessBlock)success
+              failure:(MBRWFailureBlock)failure;
+</code></pre><h4 id="获取账户助记词"><a name="获取账户助记词" href="#获取账户助记词"></a>获取账户助记词</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 获取账户助记词
+
+ @param address 账户地址
+ @param pwd 密码
+ @param err 错误
+ @return 助记词文本
+ */
++ (NSString*)getMnemonic:(NSString*)address
+                     pwd:(NSString*)pwd
+                   error:(NSError *__autoreleasing *)err;
+</code></pre>"><span class="hljs-javadoc">/**
+ 获取账户助记词
+
+<span class="hljs-javadoctag"> @param</span> address 账户地址
+<span class="hljs-javadoctag"> @param</span> pwd 密码
+<span class="hljs-javadoctag"> @param</span> err 错误
+<span class="hljs-javadoctag"> @return</span> 助记词文本
+ */</span>
++ (NSString*)getMnemonic:(NSString*)address
+                     pwd:(NSString*)pwd
+                   error:(NSError *<span class="hljs-number">__</span>autoreleasing *)err;
+</code></pre><h4 id="是否已备份账户"><a name="是否已备份账户" href="#是否已备份账户"></a>是否已备份账户</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 是否已备份账户
+
+ @param address 账户地址
+ @return YES：账户已经备份过助记词或者账户是由keystore导入的
+ */
++ (BOOL)isAccountBackup:(NSString*)address;
+</code></pre>"><span class="hljs-javadoc">/**
+ 是否已备份账户
+
+<span class="hljs-javadoctag"> @param</span> address 账户地址
+<span class="hljs-javadoctag"> @return</span> YES：账户已经备份过助记词或者账户是由keystore导入的
+ */</span>
++ (BOOL)isAccountBackup:(NSString*)address;
+</code></pre><h4 id="备份账户"><a name="备份账户" href="#备份账户"></a>备份账户</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 备份账户
+
+ @param address 账户地址
+ @param pwd 校验密码
+ @param mnemonic 校验助记词
+ @param success 操作成功
+ @param failure 操作失败
+ */
++ (void)backupAccount:(NSString*)address
+                  pwd:(NSString*)pwd
+             mnemonic:(NSString*)mnemonic
+              success:(MBRWAccountOprationSuccessBlock)success
+              failure:(MBRWFailureBlock)failure;
+</code></pre>"><span class="hljs-javadoc">/**
+ 备份账户
+
+<span class="hljs-javadoctag"> @param</span> address 账户地址
+<span class="hljs-javadoctag"> @param</span> pwd 校验密码
+<span class="hljs-javadoctag"> @param</span> mnemonic 校验助记词
+<span class="hljs-javadoctag"> @param</span> success 操作成功
+<span class="hljs-javadoctag"> @param</span> failure 操作失败
+ */</span>
++ (<span class="hljs-keyword">void</span>)backupAccount:(NSString*)address
+                  pwd:(NSString*)pwd
+             mnemonic:(NSString*)mnemonic
+              success:(MBRWAccountOprationSuccessBlock)success
+              failure:(MBRWFailureBlock)failure;
+</code></pre><h4 id="导出keystore"><a name="导出keystore" href="#导出keystore"></a>导出keystore</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 导出keystore
+
+ @param address 账户地址
+ @param pwd 账户密码
+ @param ksPwd keystory密码
+ @param success 导出成功回调
+ @param failure 导出失败回调
+ */
++ (void)exportKeystore:(NSString*)address
+                   pwd:(NSString*)pwd
+                 ksPwd:(NSString*)ksPwd
+               success:(void (^)(NSString *json))success
+               failure:(MBRWFailureBlock)failure;
+</code></pre>"><span class="hljs-javadoc">/**
+ 导出keystore
+
+<span class="hljs-javadoctag"> @param</span> address 账户地址
+<span class="hljs-javadoctag"> @param</span> pwd 账户密码
+<span class="hljs-javadoctag"> @param</span> ksPwd keystory密码
+<span class="hljs-javadoctag"> @param</span> success 导出成功回调
+<span class="hljs-javadoctag"> @param</span> failure 导出失败回调
+ */</span>
++ (<span class="hljs-keyword">void</span>)exportKeystore:(NSString*)address
+                   pwd:(NSString*)pwd
+                 ksPwd:(NSString*)ksPwd
+               success:(<span class="hljs-keyword">void</span> (^)(NSString *json))success
+               failure:(MBRWFailureBlock)failure;
+</code></pre><h4 id="设为默认账户"><a name="设为默认账户" href="#设为默认账户"></a>设为默认账户</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 设为默认账户
+
+ @param address 地址
+ @param pwd 密码
+ @param success 操作成功回调
+ @param failure 操作失败回调
+ */
++ (void)setAsDefaultAccount:(NSString*)address
+                        pwd:(NSString*)pwd
+                    success:(MBRWAccountOprationSuccessBlock)success
+                    failure:(MBRWFailureBlock)failure;
+</code></pre>"><span class="hljs-javadoc">/**
+ 设为默认账户
+
+<span class="hljs-javadoctag"> @param</span> address 地址
+<span class="hljs-javadoctag"> @param</span> pwd 密码
+<span class="hljs-javadoctag"> @param</span> success 操作成功回调
+<span class="hljs-javadoctag"> @param</span> failure 操作失败回调
+ */</span>
++ (<span class="hljs-keyword">void</span>)setAsDefaultAccount:(NSString*)address
+                        pwd:(NSString*)pwd
+                    success:(MBRWAccountOprationSuccessBlock)success
+                    failure:(MBRWFailureBlock)failure;
+</code></pre><h4 id="重命名账户"><a name="重命名账户" href="#重命名账户"></a>重命名账户</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 重命名账户
+
+ @param name 账户名
+ @param newName 新名称
+ @param pwd 交易密码
+ @param success 操作成功回调
+ @param failure 操作失败回调
+ */
++ (void)renameAccount:(NSString*)name
+              newName:(NSString*)newName
+                  pwd:(NSString*)pwd
+              success:(MBRWAccountOprationSuccessBlock)success
+              failure:(MBRWFailureBlock)failure;
+</code></pre>"><span class="hljs-javadoc">/**
+ 重命名账户
+
+<span class="hljs-javadoctag"> @param</span> name 账户名
+<span class="hljs-javadoctag"> @param</span> newName 新名称
+<span class="hljs-javadoctag"> @param</span> pwd 交易密码
+<span class="hljs-javadoctag"> @param</span> success 操作成功回调
+<span class="hljs-javadoctag"> @param</span> failure 操作失败回调
+ */</span>
++ (<span class="hljs-keyword">void</span>)renameAccount:(NSString*)name
+              newName:(NSString*)newName
+                  pwd:(NSString*)pwd
+              success:(MBRWAccountOprationSuccessBlock)success
+              failure:(MBRWFailureBlock)failure;
+</code></pre><h4 id="获取所有账户"><a name="获取所有账户" href="#获取所有账户"></a>获取所有账户</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 获取所有账户
+
+ @return MBRWAccount数组
+ */
++ (NSArray&amp;lt;MBRWAccount*&amp;gt;*)getAllAccount;
+</code></pre>"><span class="hljs-javadoc">/**
+ 获取所有账户
+
+<span class="hljs-javadoctag"> @return</span> MBRWAccount数组
+ */</span>
++ (NSArray&lt;MBRWAccount*&gt;*)getAllAccount;
+</code></pre><h4 id="获取默认账户"><a name="获取默认账户" href="#获取默认账户"></a>获取默认账户</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 获取默认账户
+
+ @return MBRWAccount
+ */
++ (MBRWAccount*)getDefaultAccount;
+</code></pre>"><span class="hljs-javadoc">/**
+ 获取默认账户
+
+<span class="hljs-javadoctag"> @return</span> MBRWAccount
+ */</span>
++ (MBRWAccount*)getDefaultAccount;
+</code></pre><h4 id="查找账户"><a name="查找账户" href="#查找账户"></a>查找账户</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 查找账户
+
+ @param address 地址
+ @return MBRWAccount
+ */
++ (MBRWAccount*)getAccountWithAddress:(NSString*)address;
+</code></pre>"><span class="hljs-javadoc">/**
+ 查找账户
+
+<span class="hljs-javadoctag"> @param</span> address 地址
+<span class="hljs-javadoctag"> @return</span> MBRWAccount
+ */</span>
++ (MBRWAccount*)getAccountWithAddress:(NSString*)address;
+</code></pre><h4 id="同步账户余额信息"><a name="同步账户余额信息" href="#同步账户余额信息"></a>同步账户余额信息</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 同步账户余额信息
+
+ @param complete 同步完成回调
+ */
++ (void)syncAllAccountBalance:(void(^)(BOOL success))complete;
+</code></pre>"><span class="hljs-javadoc">/**
+ 同步账户余额信息
+
+<span class="hljs-javadoctag"> @param</span> complete 同步完成回调
+ */</span>
++ (<span class="hljs-keyword">void</span>)syncAllAccountBalance:(<span class="hljs-keyword">void</span>(^)(BOOL success))complete;
+</code></pre><h4 id="更新账户中币的选中状态"><a name="更新账户中币的选中状态" href="#更新账户中币的选中状态"></a>更新账户中币的选中状态</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 更新账户中币的选中状态
+
+ @param coin MBRBgCoin
+ @param address 账户地址
+ @param callBack 完成回调
+ */
++ (void)updateAccountCoinSelectSatate:(MBRBgCoin *)coin
+                     toAccountAddress:(NSString *)address
+                             callBack:(void (^)(BOOL success))callBack;
+</code></pre>"><span class="hljs-javadoc">/**
+ 更新账户中币的选中状态
+
+<span class="hljs-javadoctag"> @param</span> coin MBRBgCoin
+<span class="hljs-javadoctag"> @param</span> address 账户地址
+<span class="hljs-javadoctag"> @param</span> callBack 完成回调
+ */</span>
++ (<span class="hljs-keyword">void</span>)updateAccountCoinSelectSatate:(MBRBgCoin *)coin
+                     toAccountAddress:(NSString *)address
+                             callBack:(<span class="hljs-keyword">void</span> (^)(BOOL success))callBack;
+</code></pre><h3 id="交易接口"><a name="交易接口" href="#交易接口"></a>交易接口</h3><h4 id="支付"><a name="支付" href="#支付"></a>支付</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 密码支付
+
+ @param param 参数
+ @param pwd 密码
+ @param success 支付成功回调
+ @param failure 支付失败回调
+ */
++ (void)payWithPrarm:(MBRWPayParam*)param
+            password:(NSString*)pwd
+             success:(MBRWTransactionSuccessBlock)success
+             failure:(MBRWFailureBlock)failure;
+</code></pre>"><span class="hljs-javadoc">/**
+ 密码支付
+
+<span class="hljs-javadoctag"> @param</span> param 参数
+<span class="hljs-javadoctag"> @param</span> pwd 密码
+<span class="hljs-javadoctag"> @param</span> success 支付成功回调
+<span class="hljs-javadoctag"> @param</span> failure 支付失败回调
+ */</span>
++ (<span class="hljs-keyword">void</span>)payWithPrarm:(MBRWPayParam*)param
+            password:(NSString*)pwd
+             success:(MBRWTransactionSuccessBlock)success
+             failure:(MBRWFailureBlock)failure;
+</code></pre><h4 id="转账"><a name="转账" href="#转账"></a>转账</h4><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>/**
+ 密码转账
+
+ @param param 参数
+ @param pwd 密码
+ @param success 支付成功回调
+ @param failure 支付失败回调
+ */
++ (void)transferWithPrarm:(MBRWTransferParam*)param
+            password:(NSString*)pwd
+             success:(MBRWTransactionSuccessBlock)success
+             failure:(MBRWFailureBlock)failure;
+</code></pre>"><span class="hljs-javadoc">/**
+ 密码转账
+
+<span class="hljs-javadoctag"> @param</span> param 参数
+<span class="hljs-javadoctag"> @param</span> pwd 密码
+<span class="hljs-javadoctag"> @param</span> success 支付成功回调
+<span class="hljs-javadoctag"> @param</span> failure 支付失败回调
+ */</span>
++ (<span class="hljs-keyword">void</span>)transferWithPrarm:(MBRWTransferParam*)param
+            password:(NSString*)pwd
+             success:(MBRWTransactionSuccessBlock)success
+             failure:(MBRWFailureBlock)failure;
+</code></pre><h2 id="错误码"><a name="错误码" href="#错误码"></a>错误码</h2><p>错误码使用示例：</p><pre class="java hljs"><code class="java" data-origin="<pre><code class=&quot;java&quot;>+ (NSString*)parseError:(NSError*)error {
+
+    NSString *errorCOde = nil；
+    //判断是否钱包错误码
+    if ([error mbrw_isWalletError]) {
+        // 获取错误码
+        NSString *errorCOde = [error mbrw_errorCode];
+    }
+
+    return errorCOde;    
+}
+</code></pre>">+ (NSString*)parseError:(NSError*)error {
+
+    NSString *errorCOde = nil；
+    <span class="hljs-comment">//判断是否钱包错误码</span>
+    <span class="hljs-keyword">if</span> ([error mbrw_isWalletError]) {
+        <span class="hljs-comment">// 获取错误码</span>
+        NSString *errorCOde = [error mbrw_errorCode];
+    }
+
+    <span class="hljs-keyword">return</span> errorCOde;    
+}
+</code></pre><table>
+<thead>
+<tr>
+<th>错误</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WALLET_UNKNOWN_ERROR</td>
+<td>未知错误</td>
+<td></td>
+</tr>
+<tr>
+<td>PASSWORD_EMPTY_ERROR</td>
+<td>输入的密码为空</td>
+<td></td>
+</tr>
+<tr>
+<td>PASSWORD_NO_ERROR</td>
+<td>钱包交易密码不存在，未设置</td>
+<td>无密码，需先设置密码</td>
+</tr>
+<tr>
+<td>PASSWORD_SET_FAIL_FOR_ALREADY_SET</td>
+<td>密码已经存在</td>
+<td></td>
+</tr>
+<tr>
+<td>PASSWORD_ERROR</td>
+<td>密码错误</td>
+<td></td>
+</tr>
+<tr>
+<td>PASSWORD_MODIFY_NEWPWD_SAME_TO_OLDPWD_ERROR</td>
+<td>密码一样</td>
+<td>修改密码时，密码也原密码一样</td>
+</tr>
+<tr>
+<td>ACCOUNT_NAME_EMPTY_ERROR</td>
+<td>账号名为空</td>
+<td></td>
+</tr>
+<tr>
+<td>ACCOUNT_NAME_DUPLICATE_ERROR</td>
+<td>账户名已经存在</td>
+<td></td>
+</tr>
+<tr>
+<td>ACCOUNT_DUPLICATE_ERROR</td>
+<td>账户地址已存在</td>
+<td>如：重复添加同一个keystore账户时，会抛出此异常</td>
+</tr>
+<tr>
+<td>ACCOUNT_NOT_EXIST_ERROR</td>
+<td>账户不存在</td>
+<td></td>
+</tr>
+<tr>
+<td>MNEMONIC_EMPTY_ERROR</td>
+<td>助记词导入，助记词为空</td>
+<td></td>
+</tr>
+<tr>
+<td>MNEMONIC_ERROR</td>
+<td>导入时，助记词不匹配</td>
+<td></td>
+</tr>
+<tr>
+<td>KEYSTORE_EMPTY_ERROR</td>
+<td>keystore导入，keystore为空</td>
+<td></td>
+</tr>
+<tr>
+<td>KEYSTORE_PWD_EMPTY_ERROR</td>
+<td>keystore导入，keystore密码为空</td>
+<td></td>
+</tr>
+<tr>
+<td>KEYSTORE_ERROR</td>
+<td>keystore错误</td>
+<td></td>
+</tr>
+<tr>
+<td>PAY_PRAMAM_ERROR</td>
+<td>支付参数错误</td>
+<td></td>
+</tr>
+<tr>
+<td>PAY_BALANCE_NOT_ENOUGH_ERROR</td>
+<td>余额不足</td>
+<td>账户的余额不足</td>
+</tr>
+<tr>
+<td>PAY_FEE_NOT_ENOUGH_ERROR</td>
+<td>矿工费不足</td>
+<td>账户的余额不足以支付矿工费</td>
+</tr>
+<tr>
+<td>FINGER_UNAVAILABLE_ERROR</td>
+<td>设备不支持touchid</td>
+<td></td>
+</tr>
+<tr>
+<td>FINGERPRINT_ERROR</td>
+<td>touchid验证失败</td>
+<td></td>
+</tr>
+<tr>
+<td>ACCOUNT_COIN_NOT_EXIST_ERROR</td>
+<td>账户中代币不存在</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<footer style="position:fixed; font-size:.8em; text-align:right; bottom:0px; margin-left:-25px; height:20px; width:100%;">generated by <a href="http://pad.haroopress.com" target="_blank">haroopad</a></footer>
+</body>
+</html>
