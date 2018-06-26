@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="WDBalanceCollectionReusableView" id="oio-2z-fbk" customClass="WDBalanceCollectionReusableView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AccountName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MH-Km-h5m">
+                    <rect key="frame" x="16" y="19" width="249" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOz-zZ-bYc">
+                    <rect key="frame" x="336" y="12" width="26" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="BM4-c4-4dT"/>
+                        <constraint firstAttribute="width" constant="26" id="NuD-T6-hCv"/>
+                    </constraints>
+                    <state key="normal" image="plus"/>
+                    <connections>
+                        <action selector="moreAction:" destination="oio-2z-fbk" eventType="touchUpInside" id="8OM-qL-11g"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="hdM-Xr-3Hw" firstAttribute="bottom" secondItem="DOz-zZ-bYc" secondAttribute="bottom" constant="12" id="2lN-Vc-rnv"/>
+                <constraint firstItem="hdM-Xr-3Hw" firstAttribute="trailing" secondItem="8MH-Km-h5m" secondAttribute="trailing" constant="110" id="5r6-BV-jYB"/>
+                <constraint firstItem="hdM-Xr-3Hw" firstAttribute="bottom" secondItem="8MH-Km-h5m" secondAttribute="bottom" constant="14" id="76y-eb-2XL"/>
+                <constraint firstItem="hdM-Xr-3Hw" firstAttribute="trailing" secondItem="DOz-zZ-bYc" secondAttribute="trailing" constant="13" id="WGY-B3-f99"/>
+                <constraint firstItem="8MH-Km-h5m" firstAttribute="leading" secondItem="hdM-Xr-3Hw" secondAttribute="leading" constant="16" id="uGM-I1-DnD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="hdM-Xr-3Hw"/>
+            <connections>
+                <outlet property="accountName" destination="8MH-Km-h5m" id="IMB-I6-mwF"/>
+            </connections>
+            <point key="canvasLocation" x="79.5" y="85"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="plus" width="26" height="26"/>
+    </resources>
+</document>

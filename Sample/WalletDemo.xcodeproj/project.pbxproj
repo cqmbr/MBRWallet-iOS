@@ -1,0 +1,705 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7501D5BACF215501ABEAA0E7 /* libPods-WalletDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB464CDFB732650DF29CE67 /* libPods-WalletDemo.a */; };
+		878BBAA620E2014500EA0DE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 878BBA5520E2014500EA0DE3 /* LaunchScreen.storyboard */; };
+		878BBAA720E2014500EA0DE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 878BBA5720E2014500EA0DE3 /* Assets.xcassets */; };
+		878BBAA820E2014500EA0DE3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 878BBA5A20E2014500EA0DE3 /* Info.plist */; };
+		878BBAA920E2014500EA0DE3 /* WDTransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA5D20E2014500EA0DE3 /* WDTransferViewController.m */; };
+		878BBAAA20E2014500EA0DE3 /* WDQRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA5E20E2014500EA0DE3 /* WDQRCodeScanViewController.m */; };
+		878BBAAB20E2014500EA0DE3 /* WDFeeAdjustView.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA6020E2014500EA0DE3 /* WDFeeAdjustView.m */; };
+		878BBAAC20E2014500EA0DE3 /* WDQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA6120E2014500EA0DE3 /* WDQRCodeView.m */; };
+		878BBAAD20E2014500EA0DE3 /* WDTransactionPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA6720E2014500EA0DE3 /* WDTransactionPwdViewController.m */; };
+		878BBAAE20E2014500EA0DE3 /* WDToastUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA6C20E2014500EA0DE3 /* WDToastUtil.m */; };
+		878BBAAF20E2014500EA0DE3 /* WDQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA7120E2014500EA0DE3 /* WDQRCodeTool.m */; };
+		878BBAB020E2014500EA0DE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA7320E2014500EA0DE3 /* main.m */; };
+		878BBAB120E2014500EA0DE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA7420E2014500EA0DE3 /* AppDelegate.m */; };
+		878BBAB220E2014500EA0DE3 /* WDHomeLeftMenuHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA7620E2014500EA0DE3 /* WDHomeLeftMenuHandler.m */; };
+		878BBAB320E2014500EA0DE3 /* WDHomeLeftMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA7920E2014500EA0DE3 /* WDHomeLeftMenuView.m */; };
+		878BBAB420E2014500EA0DE3 /* WDCommonTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA7C20E2014500EA0DE3 /* WDCommonTextField.m */; };
+		878BBAB520E2014500EA0DE3 /* WDAddDCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 878BBA7D20E2014500EA0DE3 /* WDAddDCTableViewCell.xib */; };
+		878BBAB620E2014500EA0DE3 /* WDBalanceSingleDCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 878BBA8220E2014500EA0DE3 /* WDBalanceSingleDCTableViewCell.xib */; };
+		878BBAB720E2014500EA0DE3 /* WDBalanceSingleDCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA8420E2014500EA0DE3 /* WDBalanceSingleDCTableViewCell.m */; };
+		878BBAB820E2014500EA0DE3 /* WDButtonGroupTagsFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA8520E2014500EA0DE3 /* WDButtonGroupTagsFrame.m */; };
+		878BBAB920E2014500EA0DE3 /* WDAddDCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA8620E2014500EA0DE3 /* WDAddDCTableViewCell.m */; };
+		878BBABA20E2014500EA0DE3 /* WDAccountExportKeystoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA8720E2014500EA0DE3 /* WDAccountExportKeystoreView.m */; };
+		878BBABB20E2014500EA0DE3 /* WDBalanceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA8920E2014500EA0DE3 /* WDBalanceDetailViewController.m */; };
+		878BBABC20E2014500EA0DE3 /* WDAccountImportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA8B20E2014500EA0DE3 /* WDAccountImportViewController.m */; };
+		878BBABD20E2014500EA0DE3 /* WDBalanceSingleDCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA8C20E2014500EA0DE3 /* WDBalanceSingleDCViewController.m */; };
+		878BBABE20E2014500EA0DE3 /* WDAccountCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA8D20E2014500EA0DE3 /* WDAccountCreateViewController.m */; };
+		878BBABF20E2014500EA0DE3 /* WDBackUpConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA8E20E2014500EA0DE3 /* WDBackUpConfirmViewController.m */; };
+		878BBAC020E2014500EA0DE3 /* WDBackUpContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA9020E2014500EA0DE3 /* WDBackUpContentViewController.m */; };
+		878BBAC120E2014500EA0DE3 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 878BBA9420E2014500EA0DE3 /* Account.storyboard */; };
+		878BBAC220E2014500EA0DE3 /* WDBlanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA9720E2014500EA0DE3 /* WDBlanceViewController.m */; };
+		878BBAC320E2014500EA0DE3 /* WDBalanceCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA9920E2014500EA0DE3 /* WDBalanceCollectionReusableView.m */; };
+		878BBAC420E2014500EA0DE3 /* WDBalanceCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 878BBA9A20E2014500EA0DE3 /* WDBalanceCollectionCell.xib */; };
+		878BBAC520E2014500EA0DE3 /* WDBalanceCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 878BBA9B20E2014500EA0DE3 /* WDBalanceCollectionReusableView.xib */; };
+		878BBAC620E2014500EA0DE3 /* Balance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 878BBA9D20E2014500EA0DE3 /* Balance.storyboard */; };
+		878BBAC720E2014500EA0DE3 /* WDBalanceCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBA9E20E2014500EA0DE3 /* WDBalanceCollectionCell.m */; };
+		878BBAC820E2014500EA0DE3 /* WDViewControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBAA220E2014500EA0DE3 /* WDViewControllerBase.m */; };
+		878BBAC920E2014500EA0DE3 /* UIButton+MBRElarge.m in Sources */ = {isa = PBXBuildFile; fileRef = 878BBAA320E2014500EA0DE3 /* UIButton+MBRElarge.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3254B2F1CA91F90479E05179 /* Pods-WalletDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalletDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WalletDemo/Pods-WalletDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		39A1A03BD30AD7CF77BB21BA /* libPods-DCPay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DCPay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8782158C2067E1B5004840E7 /* WalletDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalletDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		878BBA5520E2014500EA0DE3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		878BBA5720E2014500EA0DE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		878BBA5A20E2014500EA0DE3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		878BBA5D20E2014500EA0DE3 /* WDTransferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDTransferViewController.m; sourceTree = "<group>"; };
+		878BBA5E20E2014500EA0DE3 /* WDQRCodeScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDQRCodeScanViewController.m; sourceTree = "<group>"; };
+		878BBA6020E2014500EA0DE3 /* WDFeeAdjustView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDFeeAdjustView.m; sourceTree = "<group>"; };
+		878BBA6120E2014500EA0DE3 /* WDQRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDQRCodeView.m; sourceTree = "<group>"; };
+		878BBA6220E2014500EA0DE3 /* WDFeeAdjustView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDFeeAdjustView.h; sourceTree = "<group>"; };
+		878BBA6320E2014500EA0DE3 /* WDQRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDQRCodeView.h; sourceTree = "<group>"; };
+		878BBA6420E2014500EA0DE3 /* WDTransferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDTransferViewController.h; sourceTree = "<group>"; };
+		878BBA6520E2014500EA0DE3 /* WDQRCodeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDQRCodeScanViewController.h; sourceTree = "<group>"; };
+		878BBA6720E2014500EA0DE3 /* WDTransactionPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDTransactionPwdViewController.m; sourceTree = "<group>"; };
+		878BBA6820E2014500EA0DE3 /* WDTransactionPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDTransactionPwdViewController.h; sourceTree = "<group>"; };
+		878BBA6A20E2014500EA0DE3 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		878BBA6C20E2014500EA0DE3 /* WDToastUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDToastUtil.m; sourceTree = "<group>"; };
+		878BBA6D20E2014500EA0DE3 /* WDQRCodeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDQRCodeTool.h; sourceTree = "<group>"; };
+		878BBA6E20E2014500EA0DE3 /* WDDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDDevice.h; sourceTree = "<group>"; };
+		878BBA6F20E2014500EA0DE3 /* WDToastUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDToastUtil.h; sourceTree = "<group>"; };
+		878BBA7020E2014500EA0DE3 /* WDResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDResource.h; sourceTree = "<group>"; };
+		878BBA7120E2014500EA0DE3 /* WDQRCodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDQRCodeTool.m; sourceTree = "<group>"; };
+		878BBA7220E2014500EA0DE3 /* WDUIPrefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDUIPrefix.h; sourceTree = "<group>"; };
+		878BBA7320E2014500EA0DE3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		878BBA7420E2014500EA0DE3 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		878BBA7620E2014500EA0DE3 /* WDHomeLeftMenuHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDHomeLeftMenuHandler.m; sourceTree = "<group>"; };
+		878BBA7720E2014500EA0DE3 /* WDHomeLeftMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDHomeLeftMenuView.h; sourceTree = "<group>"; };
+		878BBA7820E2014500EA0DE3 /* WDHomeLeftMenuHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDHomeLeftMenuHandler.h; sourceTree = "<group>"; };
+		878BBA7920E2014500EA0DE3 /* WDHomeLeftMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDHomeLeftMenuView.m; sourceTree = "<group>"; };
+		878BBA7C20E2014500EA0DE3 /* WDCommonTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDCommonTextField.m; sourceTree = "<group>"; };
+		878BBA7D20E2014500EA0DE3 /* WDAddDCTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WDAddDCTableViewCell.xib; sourceTree = "<group>"; };
+		878BBA7E20E2014500EA0DE3 /* WDBalanceSingleDCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDBalanceSingleDCTableViewCell.h; sourceTree = "<group>"; };
+		878BBA7F20E2014500EA0DE3 /* WDButtonGroupTagsFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDButtonGroupTagsFrame.h; sourceTree = "<group>"; };
+		878BBA8020E2014500EA0DE3 /* WDAccountExportKeystoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDAccountExportKeystoreView.h; sourceTree = "<group>"; };
+		878BBA8120E2014500EA0DE3 /* WDAddDCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDAddDCTableViewCell.h; sourceTree = "<group>"; };
+		878BBA8220E2014500EA0DE3 /* WDBalanceSingleDCTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WDBalanceSingleDCTableViewCell.xib; sourceTree = "<group>"; };
+		878BBA8320E2014500EA0DE3 /* WDCommonTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDCommonTextField.h; sourceTree = "<group>"; };
+		878BBA8420E2014500EA0DE3 /* WDBalanceSingleDCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDBalanceSingleDCTableViewCell.m; sourceTree = "<group>"; };
+		878BBA8520E2014500EA0DE3 /* WDButtonGroupTagsFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDButtonGroupTagsFrame.m; sourceTree = "<group>"; };
+		878BBA8620E2014500EA0DE3 /* WDAddDCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDAddDCTableViewCell.m; sourceTree = "<group>"; };
+		878BBA8720E2014500EA0DE3 /* WDAccountExportKeystoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDAccountExportKeystoreView.m; sourceTree = "<group>"; };
+		878BBA8920E2014500EA0DE3 /* WDBalanceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDBalanceDetailViewController.m; sourceTree = "<group>"; };
+		878BBA8A20E2014500EA0DE3 /* WDBackUpContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDBackUpContentViewController.h; sourceTree = "<group>"; };
+		878BBA8B20E2014500EA0DE3 /* WDAccountImportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDAccountImportViewController.m; sourceTree = "<group>"; };
+		878BBA8C20E2014500EA0DE3 /* WDBalanceSingleDCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDBalanceSingleDCViewController.m; sourceTree = "<group>"; };
+		878BBA8D20E2014500EA0DE3 /* WDAccountCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDAccountCreateViewController.m; sourceTree = "<group>"; };
+		878BBA8E20E2014500EA0DE3 /* WDBackUpConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDBackUpConfirmViewController.m; sourceTree = "<group>"; };
+		878BBA8F20E2014500EA0DE3 /* WDBalanceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDBalanceDetailViewController.h; sourceTree = "<group>"; };
+		878BBA9020E2014500EA0DE3 /* WDBackUpContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDBackUpContentViewController.m; sourceTree = "<group>"; };
+		878BBA9120E2014500EA0DE3 /* WDAccountImportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDAccountImportViewController.h; sourceTree = "<group>"; };
+		878BBA9220E2014500EA0DE3 /* WDAccountCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDAccountCreateViewController.h; sourceTree = "<group>"; };
+		878BBA9320E2014500EA0DE3 /* WDBackUpConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDBackUpConfirmViewController.h; sourceTree = "<group>"; };
+		878BBA9420E2014500EA0DE3 /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		878BBA9520E2014500EA0DE3 /* WDBalanceSingleDCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDBalanceSingleDCViewController.h; sourceTree = "<group>"; };
+		878BBA9720E2014500EA0DE3 /* WDBlanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDBlanceViewController.m; sourceTree = "<group>"; };
+		878BBA9820E2014500EA0DE3 /* WDBalanceCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDBalanceCollectionCell.h; sourceTree = "<group>"; };
+		878BBA9920E2014500EA0DE3 /* WDBalanceCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDBalanceCollectionReusableView.m; sourceTree = "<group>"; };
+		878BBA9A20E2014500EA0DE3 /* WDBalanceCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WDBalanceCollectionCell.xib; sourceTree = "<group>"; };
+		878BBA9B20E2014500EA0DE3 /* WDBalanceCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WDBalanceCollectionReusableView.xib; sourceTree = "<group>"; };
+		878BBA9C20E2014500EA0DE3 /* WDBlanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDBlanceViewController.h; sourceTree = "<group>"; };
+		878BBA9D20E2014500EA0DE3 /* Balance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Balance.storyboard; sourceTree = "<group>"; };
+		878BBA9E20E2014500EA0DE3 /* WDBalanceCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDBalanceCollectionCell.m; sourceTree = "<group>"; };
+		878BBA9F20E2014500EA0DE3 /* WDBalanceCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDBalanceCollectionReusableView.h; sourceTree = "<group>"; };
+		878BBAA120E2014500EA0DE3 /* UIButton+MBRElarge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+MBRElarge.h"; sourceTree = "<group>"; };
+		878BBAA220E2014500EA0DE3 /* WDViewControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDViewControllerBase.m; sourceTree = "<group>"; };
+		878BBAA320E2014500EA0DE3 /* UIButton+MBRElarge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MBRElarge.m"; sourceTree = "<group>"; };
+		878BBAA420E2014500EA0DE3 /* WDViewControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDViewControllerBase.h; sourceTree = "<group>"; };
+		A9B14EE72A01182E39C4FE93 /* Pods-DCPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCPay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DCPay/Pods-DCPay.debug.xcconfig"; sourceTree = "<group>"; };
+		AAB0F70AF49E4B4F68A77DA2 /* Pods-DCPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCPay.release.xcconfig"; path = "Pods/Target Support Files/Pods-DCPay/Pods-DCPay.release.xcconfig"; sourceTree = "<group>"; };
+		ADB464CDFB732650DF29CE67 /* libPods-WalletDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WalletDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF77DA9EDB0B26B7562CD754 /* Pods-WalletDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalletDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WalletDemo/Pods-WalletDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		878215892067E1B5004840E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7501D5BACF215501ABEAA0E7 /* libPods-WalletDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F3129EC75DDEEB66F5ED5B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9B14EE72A01182E39C4FE93 /* Pods-DCPay.debug.xcconfig */,
+				AAB0F70AF49E4B4F68A77DA2 /* Pods-DCPay.release.xcconfig */,
+				3254B2F1CA91F90479E05179 /* Pods-WalletDemo.debug.xcconfig */,
+				AF77DA9EDB0B26B7562CD754 /* Pods-WalletDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1D34741BD12E705B78ECE99C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39A1A03BD30AD7CF77BB21BA /* libPods-DCPay.a */,
+				ADB464CDFB732650DF29CE67 /* libPods-WalletDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		878215832067E1B5004840E7 = {
+			isa = PBXGroup;
+			children = (
+				878BBA5020E2014500EA0DE3 /* WalletDemo */,
+				8782158D2067E1B5004840E7 /* Products */,
+				0F3129EC75DDEEB66F5ED5B2 /* Pods */,
+				1D34741BD12E705B78ECE99C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8782158D2067E1B5004840E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8782158C2067E1B5004840E7 /* WalletDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		878BBA5020E2014500EA0DE3 /* WalletDemo */ = {
+			isa = PBXGroup;
+			children = (
+				878BBA5520E2014500EA0DE3 /* LaunchScreen.storyboard */,
+				878BBA5720E2014500EA0DE3 /* Assets.xcassets */,
+				878BBA5A20E2014500EA0DE3 /* Info.plist */,
+				878BBA5B20E2014500EA0DE3 /* Src */,
+			);
+			path = WalletDemo;
+			sourceTree = "<group>";
+		};
+		878BBA5B20E2014500EA0DE3 /* Src */ = {
+			isa = PBXGroup;
+			children = (
+				878BBA5C20E2014500EA0DE3 /* Transaction */,
+				878BBA6620E2014500EA0DE3 /* Password */,
+				878BBA6920E2014500EA0DE3 /* Other */,
+				878BBA7520E2014500EA0DE3 /* Menu */,
+				878BBA7A20E2014500EA0DE3 /* Account */,
+				878BBA9620E2014500EA0DE3 /* Main */,
+			);
+			path = Src;
+			sourceTree = "<group>";
+		};
+		878BBA5C20E2014500EA0DE3 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				878BBA5D20E2014500EA0DE3 /* WDTransferViewController.m */,
+				878BBA5E20E2014500EA0DE3 /* WDQRCodeScanViewController.m */,
+				878BBA5F20E2014500EA0DE3 /* View */,
+				878BBA6420E2014500EA0DE3 /* WDTransferViewController.h */,
+				878BBA6520E2014500EA0DE3 /* WDQRCodeScanViewController.h */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		878BBA5F20E2014500EA0DE3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				878BBA6020E2014500EA0DE3 /* WDFeeAdjustView.m */,
+				878BBA6120E2014500EA0DE3 /* WDQRCodeView.m */,
+				878BBA6220E2014500EA0DE3 /* WDFeeAdjustView.h */,
+				878BBA6320E2014500EA0DE3 /* WDQRCodeView.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		878BBA6620E2014500EA0DE3 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				878BBA6720E2014500EA0DE3 /* WDTransactionPwdViewController.m */,
+				878BBA6820E2014500EA0DE3 /* WDTransactionPwdViewController.h */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
+		878BBA6920E2014500EA0DE3 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				878BBA6A20E2014500EA0DE3 /* AppDelegate.h */,
+				878BBA6B20E2014500EA0DE3 /* Util */,
+				878BBA7320E2014500EA0DE3 /* main.m */,
+				878BBA7420E2014500EA0DE3 /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		878BBA6B20E2014500EA0DE3 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				878BBA6C20E2014500EA0DE3 /* WDToastUtil.m */,
+				878BBA6D20E2014500EA0DE3 /* WDQRCodeTool.h */,
+				878BBA6E20E2014500EA0DE3 /* WDDevice.h */,
+				878BBA6F20E2014500EA0DE3 /* WDToastUtil.h */,
+				878BBA7020E2014500EA0DE3 /* WDResource.h */,
+				878BBA7120E2014500EA0DE3 /* WDQRCodeTool.m */,
+				878BBA7220E2014500EA0DE3 /* WDUIPrefix.h */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		878BBA7520E2014500EA0DE3 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				878BBA7620E2014500EA0DE3 /* WDHomeLeftMenuHandler.m */,
+				878BBA7720E2014500EA0DE3 /* WDHomeLeftMenuView.h */,
+				878BBA7820E2014500EA0DE3 /* WDHomeLeftMenuHandler.h */,
+				878BBA7920E2014500EA0DE3 /* WDHomeLeftMenuView.m */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		878BBA7A20E2014500EA0DE3 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				878BBA7B20E2014500EA0DE3 /* View */,
+				878BBA8820E2014500EA0DE3 /* ViewController */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		878BBA7B20E2014500EA0DE3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				878BBA7C20E2014500EA0DE3 /* WDCommonTextField.m */,
+				878BBA7D20E2014500EA0DE3 /* WDAddDCTableViewCell.xib */,
+				878BBA7E20E2014500EA0DE3 /* WDBalanceSingleDCTableViewCell.h */,
+				878BBA7F20E2014500EA0DE3 /* WDButtonGroupTagsFrame.h */,
+				878BBA8020E2014500EA0DE3 /* WDAccountExportKeystoreView.h */,
+				878BBA8120E2014500EA0DE3 /* WDAddDCTableViewCell.h */,
+				878BBA8220E2014500EA0DE3 /* WDBalanceSingleDCTableViewCell.xib */,
+				878BBA8320E2014500EA0DE3 /* WDCommonTextField.h */,
+				878BBA8420E2014500EA0DE3 /* WDBalanceSingleDCTableViewCell.m */,
+				878BBA8520E2014500EA0DE3 /* WDButtonGroupTagsFrame.m */,
+				878BBA8620E2014500EA0DE3 /* WDAddDCTableViewCell.m */,
+				878BBA8720E2014500EA0DE3 /* WDAccountExportKeystoreView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		878BBA8820E2014500EA0DE3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				878BBA8920E2014500EA0DE3 /* WDBalanceDetailViewController.m */,
+				878BBA8A20E2014500EA0DE3 /* WDBackUpContentViewController.h */,
+				878BBA8B20E2014500EA0DE3 /* WDAccountImportViewController.m */,
+				878BBA8C20E2014500EA0DE3 /* WDBalanceSingleDCViewController.m */,
+				878BBA8D20E2014500EA0DE3 /* WDAccountCreateViewController.m */,
+				878BBA8E20E2014500EA0DE3 /* WDBackUpConfirmViewController.m */,
+				878BBA8F20E2014500EA0DE3 /* WDBalanceDetailViewController.h */,
+				878BBA9020E2014500EA0DE3 /* WDBackUpContentViewController.m */,
+				878BBA9120E2014500EA0DE3 /* WDAccountImportViewController.h */,
+				878BBA9220E2014500EA0DE3 /* WDAccountCreateViewController.h */,
+				878BBA9320E2014500EA0DE3 /* WDBackUpConfirmViewController.h */,
+				878BBA9420E2014500EA0DE3 /* Account.storyboard */,
+				878BBA9520E2014500EA0DE3 /* WDBalanceSingleDCViewController.h */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		878BBA9620E2014500EA0DE3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				878BBA9720E2014500EA0DE3 /* WDBlanceViewController.m */,
+				878BBA9820E2014500EA0DE3 /* WDBalanceCollectionCell.h */,
+				878BBA9920E2014500EA0DE3 /* WDBalanceCollectionReusableView.m */,
+				878BBA9A20E2014500EA0DE3 /* WDBalanceCollectionCell.xib */,
+				878BBA9B20E2014500EA0DE3 /* WDBalanceCollectionReusableView.xib */,
+				878BBA9C20E2014500EA0DE3 /* WDBlanceViewController.h */,
+				878BBA9D20E2014500EA0DE3 /* Balance.storyboard */,
+				878BBA9E20E2014500EA0DE3 /* WDBalanceCollectionCell.m */,
+				878BBA9F20E2014500EA0DE3 /* WDBalanceCollectionReusableView.h */,
+				878BBAA020E2014500EA0DE3 /* Base */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		878BBAA020E2014500EA0DE3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				878BBAA120E2014500EA0DE3 /* UIButton+MBRElarge.h */,
+				878BBAA220E2014500EA0DE3 /* WDViewControllerBase.m */,
+				878BBAA320E2014500EA0DE3 /* UIButton+MBRElarge.m */,
+				878BBAA420E2014500EA0DE3 /* WDViewControllerBase.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8782158B2067E1B5004840E7 /* WalletDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 878215A22067E1B5004840E7 /* Build configuration list for PBXNativeTarget "WalletDemo" */;
+			buildPhases = (
+				B57FA77ED4B0DC7D7959C84F /* [CP] Check Pods Manifest.lock */,
+				878215882067E1B5004840E7 /* Sources */,
+				878215892067E1B5004840E7 /* Frameworks */,
+				8782158A2067E1B5004840E7 /* Resources */,
+				1C085477A2252289B17D95F8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WalletDemo;
+			productName = DCPay;
+			productReference = 8782158C2067E1B5004840E7 /* WalletDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		878215842067E1B5004840E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DCP;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = mbr;
+				TargetAttributes = {
+					8782158B2067E1B5004840E7 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 878215872067E1B5004840E7 /* Build configuration list for PBXProject "WalletDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+				"zh-Hant",
+				ja,
+				ko,
+			);
+			mainGroup = 878215832067E1B5004840E7;
+			productRefGroup = 8782158D2067E1B5004840E7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8782158B2067E1B5004840E7 /* WalletDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8782158A2067E1B5004840E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				878BBAA820E2014500EA0DE3 /* Info.plist in Resources */,
+				878BBAC620E2014500EA0DE3 /* Balance.storyboard in Resources */,
+				878BBAA720E2014500EA0DE3 /* Assets.xcassets in Resources */,
+				878BBAB520E2014500EA0DE3 /* WDAddDCTableViewCell.xib in Resources */,
+				878BBAC520E2014500EA0DE3 /* WDBalanceCollectionReusableView.xib in Resources */,
+				878BBAA620E2014500EA0DE3 /* LaunchScreen.storyboard in Resources */,
+				878BBAB620E2014500EA0DE3 /* WDBalanceSingleDCTableViewCell.xib in Resources */,
+				878BBAC420E2014500EA0DE3 /* WDBalanceCollectionCell.xib in Resources */,
+				878BBAC120E2014500EA0DE3 /* Account.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C085477A2252289B17D95F8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WalletDemo/Pods-WalletDemo-resources.sh",
+				"${PODS_ROOT}/BButton/BButton/resources/FontAwesome.ttf",
+				"${PODS_ROOT}/MBProgressHUD+BWMExtension/Example/MBProgressHUD+BWMExtension/MBProgressHUD+BWMExtension.xcassets",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/QMUIKit/QMUIKit/QMUIResources/QMUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.car",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QMUIResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WalletDemo/Pods-WalletDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B57FA77ED4B0DC7D7959C84F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WalletDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		878215882067E1B5004840E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				878BBABA20E2014500EA0DE3 /* WDAccountExportKeystoreView.m in Sources */,
+				878BBAB420E2014500EA0DE3 /* WDCommonTextField.m in Sources */,
+				878BBAAB20E2014500EA0DE3 /* WDFeeAdjustView.m in Sources */,
+				878BBAB220E2014500EA0DE3 /* WDHomeLeftMenuHandler.m in Sources */,
+				878BBABE20E2014500EA0DE3 /* WDAccountCreateViewController.m in Sources */,
+				878BBAA920E2014500EA0DE3 /* WDTransferViewController.m in Sources */,
+				878BBAB320E2014500EA0DE3 /* WDHomeLeftMenuView.m in Sources */,
+				878BBAB120E2014500EA0DE3 /* AppDelegate.m in Sources */,
+				878BBAB720E2014500EA0DE3 /* WDBalanceSingleDCTableViewCell.m in Sources */,
+				878BBAAD20E2014500EA0DE3 /* WDTransactionPwdViewController.m in Sources */,
+				878BBAAC20E2014500EA0DE3 /* WDQRCodeView.m in Sources */,
+				878BBABF20E2014500EA0DE3 /* WDBackUpConfirmViewController.m in Sources */,
+				878BBAC320E2014500EA0DE3 /* WDBalanceCollectionReusableView.m in Sources */,
+				878BBAAF20E2014500EA0DE3 /* WDQRCodeTool.m in Sources */,
+				878BBAAA20E2014500EA0DE3 /* WDQRCodeScanViewController.m in Sources */,
+				878BBAC020E2014500EA0DE3 /* WDBackUpContentViewController.m in Sources */,
+				878BBAB020E2014500EA0DE3 /* main.m in Sources */,
+				878BBAC820E2014500EA0DE3 /* WDViewControllerBase.m in Sources */,
+				878BBAB920E2014500EA0DE3 /* WDAddDCTableViewCell.m in Sources */,
+				878BBABC20E2014500EA0DE3 /* WDAccountImportViewController.m in Sources */,
+				878BBAC720E2014500EA0DE3 /* WDBalanceCollectionCell.m in Sources */,
+				878BBABD20E2014500EA0DE3 /* WDBalanceSingleDCViewController.m in Sources */,
+				878BBABB20E2014500EA0DE3 /* WDBalanceDetailViewController.m in Sources */,
+				878BBAC920E2014500EA0DE3 /* UIButton+MBRElarge.m in Sources */,
+				878BBAC220E2014500EA0DE3 /* WDBlanceViewController.m in Sources */,
+				878BBAB820E2014500EA0DE3 /* WDButtonGroupTagsFrame.m in Sources */,
+				878BBAAE20E2014500EA0DE3 /* WDToastUtil.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		878215A02067E1B5004840E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bo Chen (5U6NET836G)";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		878215A12067E1B5004840E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Bo Chen (4N2XZN78Z5)";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		878215A32067E1B5004840E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3254B2F1CA91F90479E05179 /* Pods-WalletDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 4N2XZN78Z5;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					COSPAY_TARGET,
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/WalletDemo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mbr.walletDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		878215A42067E1B5004840E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF77DA9EDB0B26B7562CD754 /* Pods-WalletDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 4N2XZN78Z5;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					COSPAY_TARGET,
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/WalletDemo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mbr.walletDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		878215872067E1B5004840E7 /* Build configuration list for PBXProject "WalletDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				878215A02067E1B5004840E7 /* Debug */,
+				878215A12067E1B5004840E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		878215A22067E1B5004840E7 /* Build configuration list for PBXNativeTarget "WalletDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				878215A32067E1B5004840E7 /* Debug */,
+				878215A42067E1B5004840E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 878215842067E1B5004840E7 /* Project object */;
+}
