@@ -8,7 +8,6 @@
 
 #import "WDHomeLeftMenuView.h"
 #import "WDUIPrefix.h"
-#import <BButton/BButton.h>
 
 @interface WDHomeLeftMenuView()
 @property (nonatomic, weak) UIView *leftView;
