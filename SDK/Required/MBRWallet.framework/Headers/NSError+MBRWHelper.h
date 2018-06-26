@@ -1,6 +1,6 @@
 //
 //  NSError+MBRWHelper.h
-//  DCPay
+//  MBRWallet
 //
 //  Created by lfl on 2018/5/30.
 //  Copyright © 2018年 mbr. All rights reserved.

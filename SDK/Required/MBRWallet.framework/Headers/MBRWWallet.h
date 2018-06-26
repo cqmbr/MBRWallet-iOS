@@ -16,19 +16,25 @@
  账户操作成功回调
 
  @param account MBRWAccount
+ * 操作成功后返回的账户
  */
 typedef void(^MBRWAccountOprationSuccessBlock)(MBRWAccount *account);
 
 /**
  *    操作失败回调
- *    失败错误码通过：NSError+MBRWHelper中mbrw_errorCode方法获得
-      钱包定义的错误码参看类：MBRWErrorCode
- *    @param error 失败信息
+ * @discussion 失败错误码通过：NSError+MBRWHelper中mbrw_errorCode方法获得
+ *     钱包定义的错误码参看类：MBRWErrorCode
+ * @param error 失败信息
  */
 typedef void(^MBRWFailureBlock)(NSError *error);
 
 /**
- 账户钱包类
+ * @abstract 账户钱包类
+ * @discussion 提供主要功能包括：
+ * - 提供账户操作
+ * - 提供币操作
+ * - 密码管理
+ * - 同步余额、同步币列表
  */
 @interface MBRWWallet : NSObject
 
@@ -42,7 +48,7 @@ typedef void(^MBRWFailureBlock)(NSError *error);
 /**
  同步账户余额信息
  
- @param complete 完成
+ @param complete 同步完成回调
  */
 + (void)syncAllAccountBalance:(void(^)(BOOL success))complete;
 
@@ -51,7 +57,7 @@ typedef void(^MBRWFailureBlock)(NSError *error);
  
  @param coin MBRBgCoin
  @param address 账户地址
- @param callBack 完成
+ @param callBack 完成回调
  */
 + (void)updateAccountCoinSelectSatate:(MBRBgCoin *)coin
                      toAccountAddress:(NSString *)address
@@ -61,7 +67,7 @@ typedef void(^MBRWFailureBlock)(NSError *error);
  矿工费默认值
  
  @param coinId 币Id
- @return 价格，单位：eth
+ @return 价格（转换后的价格：单位：eth)
  */
 + (NSDecimalNumber*)defaultEthWithCoinId:(NSString*)coinId;
 
@@ -69,7 +75,7 @@ typedef void(^MBRWFailureBlock)(NSError *error);
  矿工费最大值
  
  @param coinId 币Id
- @return 价格，单位：eth
+ @return 价格（转换后的价格：单位：eth)
  */
 + (NSDecimalNumber*)maxEthWithCoinId:(NSString*)coinId;
 
@@ -77,7 +83,7 @@ typedef void(^MBRWFailureBlock)(NSError *error);
  矿工费最小值
  
  @param coinId 币Id
- @return 价格，单位：eth
+ @return 价格（转换后的价格：单位：eth)
  */
 + (NSDecimalNumber*)minEthWithCoinId:(NSString*)coinId;
 
@@ -87,12 +93,12 @@ typedef void(^MBRWFailureBlock)(NSError *error);
 @interface MBRWWallet(Account)
 
 /**
- 创建一个新账户并添加到钱包
+ 创建新账户
 
  @param name 账户名称
- @param pwd 交易密码
- @param success 操作成功
- @param failure 操作失败
+ @param pwd 交易
+ @param success 操作成功回调
+ @param failure 操作失败回调
  */
 + (void)addNewAccountWithName:(NSString*)name
                           pwd:(NSString *)pwd
@@ -103,10 +109,10 @@ typedef void(^MBRWFailureBlock)(NSError *error);
  助记词导入账户
 
  @param mnemonic 助记词
- @param pwd 交易密码
+ @param pwd 交易
  @param name 账户名称
- @param success 操作成功
- @param failure 操作失败
+ @param success 操作成功回调
+ @param failure 操作失败回调
  */
 + (void)importAccountByMnemonic:(NSString*)mnemonic
                             pwd:(NSString*)pwd
@@ -118,11 +124,11 @@ typedef void(^MBRWFailureBlock)(NSError *error);
  keystore导入账户
 
  @param keyStore keystore
- @param pwd 交易密码
+ @param pwd 密码
  @param pwdKS keystore密码
  @param name 账户名称
- @param success 操作成功
- @param failure 操作失败
+ @param success 操作成功回调
+ @param failure 操作失败回调
  */
 + (void)importAccountByKeystore:(NSString*)keyStore
                             pwd:(NSString*)pwd
@@ -135,9 +141,9 @@ typedef void(^MBRWFailureBlock)(NSError *error);
  删除账户
 
  @param name 账户名
- @param pwd 校验密码
- @param success 操作成功
- @param failure 操作失败
+ @param pwd 密码
+ @param success 操作成功回调
+ @param failure 操作失败回调
  */
 + (void)removeAccount:(NSString*)name
                   pwd:(NSString*)pwd
@@ -145,11 +151,11 @@ typedef void(^MBRWFailureBlock)(NSError *error);
               failure:(MBRWFailureBlock)failure;
 
 /**
- 获取某账户的助记词
+ 获取账户助记词
 
  @param address 账户地址
  @param pwd 密码
- @param err NSError
+ @param err 错误
  @return 助记词文本
  */
 + (NSString*)getMnemonic:(NSString*)address
@@ -157,7 +163,7 @@ typedef void(^MBRWFailureBlock)(NSError *error);
               error:(NSError *__autoreleasing *)err;
 
 /**
- 账户是否已备份过
+ 是否已备份账户
  
  @param address 账户地址
  @return YES：账户已经备份过助记词或者账户是由keystore导入的
@@ -185,8 +191,8 @@ typedef void(^MBRWFailureBlock)(NSError *error);
  @param address 账户地址
  @param pwd 账户密码
  @param ksPwd keystory密码
- @param success 导出成功
- @param failure 导出失败
+ @param success 导出成功回调
+ @param failure 导出失败回调
  */
 + (void)exportKeystore:(NSString*)address
                    pwd:(NSString*)pwd
@@ -197,10 +203,10 @@ typedef void(^MBRWFailureBlock)(NSError *error);
 /**
  设为默认账户
 
- @param address address
- @param pwd pwd
- @param success 操作成功
- @param failure 操作失败
+ @param address 地址
+ @param pwd 密码
+ @param success 操作成功回调
+ @param failure 操作失败回调
  */
 + (void)setAsDefaultAccount:(NSString*)address
                   pwd:(NSString*)pwd
@@ -213,8 +219,8 @@ typedef void(^MBRWFailureBlock)(NSError *error);
  @param name 账户名
  @param newName 新名称
  @param pwd 交易密码
- @param success 操作成功
- @param failure 操作失败
+ @param success 操作成功回调
+ @param failure 操作失败回调
  */
 + (void)renameAccount:(NSString*)name
               newName:(NSString*)newName
@@ -245,35 +251,40 @@ typedef void(^MBRWFailureBlock)(NSError *error);
 
 @end
 
-#pragma mark - 币列表
+#pragma mark - 钱包币列表辅助类
 /**
  钱包币列表辅助类
+ * @discussion 提供币管理功能:
+ * - 同步币列表
+ * - 获取币列表
  */
 @interface MBRWWallet(Coin)
 
 /**
- 同步币列表数据
+ 同步币列表
  
- @param callBack 结果
+ @param callBack 结果回调
+ * - success=YES:同步成功
  */
 + (void)syncAllERC20CoinList:(void (^)(BOOL success))callBack;
 
 /**
- 获取支持的所有币列表
- 等价于getNomalCoins+getForceCoins
+ 获取所有币列表
+ 
+ * @discussion 等价于getNomalCoins+getForceCoins
  @return 币数组
  */
 + (NSArray<MBRBgCoin*>*)getAllCoins;
 
 /**
- 获取支持的非必须币列表
+ 获取非必选币列表
 
  @return 币数组
  */
 + (NSArray<MBRBgCoin*>*)getNomalCoins;
 
 /**
- 获取支持的需强制添加到账户的币列表
+ 获取必选币列表
 
  @return 币数组
  */
@@ -281,9 +292,13 @@ typedef void(^MBRWFailureBlock)(NSError *error);
 
 @end
 
-#pragma mark - Passward
+#pragma mark - 钱包密码辅助类
 /**
  钱包密码辅助类
+ * @discussion 提供钱包密码管理功能，主要有：
+ * - 设置密码
+ * - 修改密码
+ * - 校验密码是否已设置，密码是否一致
  */
 @interface MBRWWallet(Passward)
 
@@ -300,8 +315,8 @@ typedef void(^MBRWFailureBlock)(NSError *error);
 
  @param oldPwd 旧密码
  @param newPwd 新密码
- @param success 修改成功
- @param failure 修改失败
+ @param success 修改成功回调
+ @param failure 修改失败回调
  */
 + (void)modifyPasswordWithOldPwd:(NSString *)oldPwd
                          newPwd:(NSString*)newPwd
@@ -309,57 +324,68 @@ typedef void(^MBRWFailureBlock)(NSError *error);
                         failure:(MBRWFailureBlock)failure;
 
 /**
- 检查是否已设置过交易密码
+ 是否已设置密码
  
- @return BOOL
+ * @discussion 校验是否设置过密码
+ * - 使用账户操作等需要密码权限校验的接口前应该先设置密码
+ * - 设置密码接口调用：[MBRWWallet setPassword:pwd error:&error];
+ @return YES=已设置；NO=未设置
  */
 + (BOOL)haveSetPassword;
 
 /**
- 判断密码是否相同
+ 密码是否相同
  
- @return BOOL
+ * @discussion 校验传入密码是否与设置的密码相等
+ @return YES = 相等；NO = 不相等
  */
 + (BOOL)isSamePassword:(NSString*)pwd;
 
 /**
  设置密码提示
 
- @param hint 提示文本
+ @param hint 密码提示文本
  */
 + (void)setPasswardHint:(NSString*)hint;
 
 /**
- 获取密码提示文本
+ 获取密码提示
 
- @return 提示文本
+ @return 密码提示文本
  */
 + (NSString*)getPasswordHint;
 
 @end
 
+#pragma mark - 钱包配置类
 /**
- 钱包环境配置类
+ * @abstract 钱包环境配置类
+ * @discussion 使用钱包提供功能前需要设置配置
+ * - 设置方式：[MBRWWallet setupWithConfig:config];
  */
 @interface MBRWWalletConfig : NSObject
 
 /**
- 默认：zh_CN
+ * @abstract 语言码
+ * @discussion 可选 默认值：zh_CN
  */
 @property (nonatomic, copy, nullable) NSString* languageCode;
 
 /**
- 渠道号(必须)
+ * @abstract 渠道号
+ * @discussion 必填
  */
 @property (nonatomic, copy, nonnull) NSString* channel;
 
 /**
- pushId
+ * @abstract 推送Id
+ * @discussion 可选
  */
 @property (nonatomic, copy, nullable) NSString* jPushId;
 
 /**
- 主机域名(必须）
+ * @abstract 服务端主机域名
+ * @discussion 可选
  */
 @property (nonatomic, copy, nonnull) NSString* apiHost;
 

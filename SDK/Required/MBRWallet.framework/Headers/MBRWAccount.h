@@ -37,7 +37,8 @@
 
 #pragma mark - 创建账户
 /**
- 通过账户名创建一个新账户
+ 新建账户
+ @discussion 通过账户名创建一个新账户
  内部使用随机助记词创建Account
  
  @param name 账户名
@@ -47,7 +48,8 @@
 + (instancetype)accountWithName:(NSString*)name pwdSumary:(NSString*)pwdS;
 
 /**
- 通过账户名和助记词创建账户
+ 助记词创建账户
+ @discussion 通过账户名和助记词创建账户
  
  @param mnemonic 助记词
  @param name 账户名
@@ -57,7 +59,8 @@
 + (instancetype)accountWithMnemonic:(NSString*)mnemonic name:(NSString*)name pwdSumary:(NSString*)pwdS;
 
 /**
- 通过账户名和keystory创建账户
+ keystory创建账户
+ @discussion 通过账户名和keystory创建账户
 
  @param keyStore keystore文本
  @param pwdKS keystore密码
@@ -88,7 +91,7 @@
 - (MBRBgCoin*)getCoinWithId:(NSString*)coinId;
 
 /**
- 获取ethereum类型的币
+ 获取eth类型的币
  
  @return 币
  */

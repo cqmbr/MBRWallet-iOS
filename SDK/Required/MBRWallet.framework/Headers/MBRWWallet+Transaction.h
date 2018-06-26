@@ -1,6 +1,6 @@
 //
 //  MBRWWallet+Transaction.h
-//  DCPay
+//  MBRWallet
 //
 //  Created by lfl on 2018/6/5.
 //  Copyright © 2018年 mbr. All rights reserved.
@@ -16,69 +16,87 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void(^MBRWTransactionSuccessBlock)(void);
 
 @class MBRBgCoin;
+
 /**
- 转账参数
+ 转账参数类
  */
 @interface MBRWTransferParam:NSObject
 
 /**
- 交易使用的币ID
+ 币ID
+ * @discussion 转账使用的币Id 必须
  */
 @property (nonatomic, copy) NSString* coinId;
-
+/**
+ 币
+ * @discussion 转账使用的币 非必须。不传时通过coinId内部查找对应的币
+ */
 @property (nonatomic, strong, nullable) MBRBgCoin* coin;
 
 
 /**
- 转出账户地址，必须
+ 转出账户地址
+ * @discussion 必须
  */
 @property (nonatomic, copy) NSString* addressFrom;
 
 /**
- 转入账户，非必须
+ 转入账户
+ * @discussion 必须
  */
 @property (nonatomic, copy) NSString* addressTo;
 
 /**
- 转出币数量，必须
+ 转出币数量
+ * @discussion 必须
  */
 @property (nonatomic, copy) NSString* amountStr;
 
 /**
-  矿工费，必须
+  矿工费
+ * @discussion 必须
  */
 @property (nonatomic, copy) NSString* feeStr;
 
 /**
- 备注，非必须
+ 备注
+ * @discussion 非必须
  */
 @property (nonatomic, copy, nullable) NSString* memo;
 
 @end
 
 /**
- 支付参数
+ 支付参数类
  */
 @interface MBRWPayParam:NSObject
 
 /**
- 订单信息，必须
+ 订单信息
+ * @discussion 必须。订单信息
  */
 @property (nonatomic, copy) NSString* orderInfo;
+/**
+ 订单数据
+ * @discussion 非必须。不填时通过orderInfo转换出订单字典
+ */
 @property (nonatomic, strong, nullable) NSDictionary* orderDic;
 
 /**
- 转出账户地址，必须
+ 转出账户地址
+ * @discussion 必须
  */
 @property (nonatomic, copy) NSString* addressFrom;
 
 /**
- 矿工费，必须
+ 矿工费
+ * @discussion 必须
  */
 @property (nonatomic, copy) NSString* feeStr;
 
 /**
- 备注，非必传
+ 备注
+ * @discussion 非必传
  */
 @property (nonatomic, copy, nullable) NSString* memo;
 
@@ -91,7 +109,8 @@ typedef void(^MBRWTransactionSuccessBlock)(void);
 @interface MBRWWallet (Transaction)
 
 /**
- 支付：密码验证方式
+ 密码方式支付
+ @discussion 密码验证方式
  
  @param param 参数
  @param pwd 密码
@@ -104,8 +123,10 @@ typedef void(^MBRWTransactionSuccessBlock)(void);
              failure:(MBRWFailureBlock)failure;
 
 /**
- 支付:
- enableTouchId==YES时，通过touchID验证，否则通过密码验证
+ 支付
+ @discussion
+ - enableTouchId==YES时，通过touchID验证，否则通过密码验证
+ - 建议使用密码支付接口
  
  @param param 参数
  @param pwd 密码，enableTouchId==NO时有效
@@ -120,7 +141,7 @@ typedef void(^MBRWTransactionSuccessBlock)(void);
              failure:(MBRWFailureBlock)failure;
 
 /**
- 转账：密码验证方式
+ 密码方式转账
  
  @param param 参数
  @param pwd 密码
@@ -134,7 +155,9 @@ typedef void(^MBRWTransactionSuccessBlock)(void);
 
 /**
  转账
- enableTouchId==YES时，通过touchID验证，否则通过密码验证
+ @discussion
+ - enableTouchId==YES时，通过touchID验证，否则通过密码验证
+ - 建议使用密码方式转账
  
  @param param 参数
  @param pwd 密码，enableTouchId==NO时有效
