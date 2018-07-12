@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7501D5BACF215501ABEAA0E7 /* libPods-WalletDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB464CDFB732650DF29CE67 /* libPods-WalletDemo.a */; };
+		870D244720F5E2A2008CB11D /* WDConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 870D244620F5E2A2008CB11D /* WDConfigManager.m */; };
 		878BBAA620E2014500EA0DE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 878BBA5520E2014500EA0DE3 /* LaunchScreen.storyboard */; };
 		878BBAA720E2014500EA0DE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 878BBA5720E2014500EA0DE3 /* Assets.xcassets */; };
 		878BBAA820E2014500EA0DE3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 878BBA5A20E2014500EA0DE3 /* Info.plist */; };
@@ -49,6 +50,8 @@
 /* Begin PBXFileReference section */
 		3254B2F1CA91F90479E05179 /* Pods-WalletDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalletDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WalletDemo/Pods-WalletDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		39A1A03BD30AD7CF77BB21BA /* libPods-DCPay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DCPay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		870D244520F5E2A2008CB11D /* WDConfigManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDConfigManager.h; sourceTree = "<group>"; };
+		870D244620F5E2A2008CB11D /* WDConfigManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDConfigManager.m; sourceTree = "<group>"; };
 		8782158C2067E1B5004840E7 /* WalletDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalletDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		878BBA5520E2014500EA0DE3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		878BBA5720E2014500EA0DE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -234,6 +237,8 @@
 				878BBA6B20E2014500EA0DE3 /* Util */,
 				878BBA7320E2014500EA0DE3 /* main.m */,
 				878BBA7420E2014500EA0DE3 /* AppDelegate.m */,
+				870D244520F5E2A2008CB11D /* WDConfigManager.h */,
+				870D244620F5E2A2008CB11D /* WDConfigManager.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -471,6 +476,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				870D244720F5E2A2008CB11D /* WDConfigManager.m in Sources */,
 				878BBABA20E2014500EA0DE3 /* WDAccountExportKeystoreView.m in Sources */,
 				878BBAB420E2014500EA0DE3 /* WDCommonTextField.m in Sources */,
 				878BBAAB20E2014500EA0DE3 /* WDFeeAdjustView.m in Sources */,
