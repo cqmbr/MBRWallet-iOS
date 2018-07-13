@@ -9,17 +9,15 @@
 #import "AppDelegate.h"
 #import <SDWebImage/SDWebImageDownloader.h>
 #import <MBRWallet/MBRWWallet.h>
+#import "WDConfigManager.h"
 
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    // 环境
-    MBRWWalletConfig *payConfig = [MBRWWalletConfig new];
-    payConfig.channel = @"73088886094000";
-    payConfig.apiHost = @"http://47.100.18.6:9900/";
-    [MBRWWallet setupWithConfig:payConfig];
+    // 钱包环境
+    [self setWalletEnvironment];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
@@ -31,6 +29,19 @@
     [SDWebImageDownloader.sharedDownloader setValue:@"*/*" forHTTPHeaderField:@"Accept"];
     
     return YES;
+}
+
+- (void)setWalletEnvironment {
+    MBRWWalletConfig *payConfig = [MBRWWalletConfig new];
+    payConfig.channel = [WDConfigManager channel];
+    payConfig.apiHost = [WDConfigManager apiHost];
+    payConfig.privateKey = [WDConfigManager privateKey];
+    payConfig.merchantId = [WDConfigManager merchantId];
+    payConfig.walletMode = MBRWWalletModel_Muti;
+    
+    [MBRWWallet setupWithConfig:payConfig];
+    [MBRWWallet setCurrentWalletWithId:@"12345" error:nil];
+
 }
 
 // 设置窗口根控制器

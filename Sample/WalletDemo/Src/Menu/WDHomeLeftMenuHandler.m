@@ -9,6 +9,7 @@
 #import "WDHomeLeftMenuHandler.h"
 #import "WDHomeLeftMenuView.h"
 #import "WDTransactionPwdViewController.h"
+#import <MBRWallet/MBRWWallet.h>
 
 
 @interface WDHomeLeftMenuHandler() <WDHomeLeftMenuViewDelegate>
@@ -56,6 +57,13 @@
         case 2: // 导入账户
             [self goToImportAccount];
             break;
+        case 3: // 切换账户
+            [self changeUser];
+            break;
+        case 4: // 清除账户
+            [self clearUserData];
+            break;
+            
         default:
             break;
     }
@@ -83,6 +91,56 @@
     UIStoryboard *board = [UIStoryboard storyboardWithName:@"Account" bundle:nil];
     UIViewController *dst = [board instantiateViewControllerWithIdentifier:@"WDAccountImportViewController"];
     [self.srcVc.navigationController pushViewController:dst animated:YES];
+}
+
+- (void)changeUser {
+    [self inputTextWithTitle:@"输入用户id" callback:^(NSString *uid) {
+        NSError *error = nil;
+        [MBRWWallet setCurrentWalletWithId:uid error:&error];
+        if (error) {
+            // WALLET_MODE_NOT_SUPPORTED_CODE,设置不正确，请检查[MBRWWallet setupWithConfig:payConfig];
+            // MBRWWalletModel_Muti才能切换用户
+            [WDToastUtil showError:error view:self.srcVc.view];
+        }
+    }];
+}
+
+- (void)clearUserData {
+    [self inputTextWithTitle:@"确定要清空数据" callback:^(NSString *uid) {
+        NSError *error = nil;
+        [MBRWWallet clearCurrentWalletWithError:&error];
+        if (error) {
+            [WDToastUtil showError:error view:self.srcVc.view];
+        }
+    }];
+
+}
+
+- (void)inputTextWithTitle:(NSString*)title callback:(void(^)(NSString* text))callBack {
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:title preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    }]];
+    
+    //增加确定按钮；
+    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        //获取第1个输入框；
+        UITextField *tf = alertController.textFields.firstObject;
+        NSString *text = tf.text;
+        if (text.length > 0) {
+            callBack(text);
+        }
+    }]];
+    
+    //定义第一个输入框；
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"请输入内容";
+    }];
+    
+    [self.srcVc presentViewController:alertController animated:true completion:nil];
+    
 }
 
 @end

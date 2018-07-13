@@ -46,6 +46,21 @@ typedef void(^MBRWFailureBlock)(NSError *error);
 + (void)setupWithConfig:(MBRWWalletConfig*)config;
 
 /**
+ 设置当前钱包
+
+ @param wId 钱包id
+ @param err 错误信息
+ */
++ (void)setCurrentWalletWithId:(NSString*)wId error:(NSError *__autoreleasing *)err;
+
+/**
+ 清空当前钱包数据
+
+ @param err 错误信息
+ */
++ (void)clearCurrentWalletWithError:(NSError *__autoreleasing *)err;
+
+/**
  同步账户余额信息
  
  @param complete 同步完成回调
@@ -214,6 +229,17 @@ typedef void(^MBRWFailureBlock)(NSError *error);
               failure:(MBRWFailureBlock)failure;
 
 /**
+ 设为默认账户
+ 
+ @param address address
+ @param success 操作成功
+ @param failure 操作失败
+ */
++ (void)setAsDefaultAccount:(NSString*)address
+                    success:(MBRWAccountOprationSuccessBlock)success
+                    failure:(MBRWFailureBlock)failure;
+
+/**
  重命名账户
 
  @param name 账户名
@@ -227,6 +253,20 @@ typedef void(^MBRWFailureBlock)(NSError *error);
                         pwd:(NSString*)pwd
                     success:(MBRWAccountOprationSuccessBlock)success
                     failure:(MBRWFailureBlock)failure;
+
+/**
+ 重命名账户
+ 
+ @param name 账户名
+ @param newName 新名称
+ @param success 成功回调
+ @param failure 失败回调
+ */
++ (void)renameAccount:(NSString*)name
+              newName:(NSString*)newName
+              success:(MBRWAccountOprationSuccessBlock)success
+              failure:(MBRWFailureBlock)failure;
+
 /**
  获取所有账户
 
@@ -248,6 +288,14 @@ typedef void(^MBRWFailureBlock)(NSError *error);
  @return MBRWAccount
  */
 + (MBRWAccount*)getAccountWithAddress:(NSString*)address;
+
+/**
+ 查找账户
+ 
+ @param name 名称
+ @return MBRWAccount
+ */
++ (MBRWAccount*)getAccountWithName:(NSString*)name;
 
 @end
 
@@ -289,6 +337,14 @@ typedef void(^MBRWFailureBlock)(NSError *error);
  @return 币数组
  */
 + (NSArray<MBRBgCoin*>*)getForceCoins;
+
+/**
+ 通过id获取币
+ 
+ @param coinId 币id
+ @return 币
+ */
++ (MBRBgCoin *)getCoinById:(NSString *)coinId;
 
 @end
 
@@ -357,6 +413,18 @@ typedef void(^MBRWFailureBlock)(NSError *error);
 
 @end
 
+
+/**
+ 钱包使用模式
+
+ - MBRWWalletModel_Single: 但钱包模式
+ - MBRWWalletModel_Muti: 多钱包模式
+ */
+typedef NS_ENUM(NSInteger, MBRWWalletModel) {
+    MBRWWalletModel_Single = 0,
+    MBRWWalletModel_Muti
+};
+
 #pragma mark - 钱包配置类
 /**
  * @abstract 钱包环境配置类
@@ -364,6 +432,12 @@ typedef void(^MBRWFailureBlock)(NSError *error);
  * - 设置方式：[MBRWWallet setupWithConfig:config];
  */
 @interface MBRWWalletConfig : NSObject
+
+/**
+ * @abstract 钱包模式
+ * @discussion 必选 MBRWWalletModel
+ */
+@property (nonatomic, assign) MBRWWalletModel walletMode;
 
 /**
  * @abstract 语言码
@@ -376,6 +450,19 @@ typedef void(^MBRWFailureBlock)(NSError *error);
  * @discussion 必填
  */
 @property (nonatomic, copy, nonnull) NSString* channel;
+
+/**
+ * @abstract 私钥(平台分配)
+ * @discussion 必填
+ */
+@property (nonatomic, copy, nonnull) NSString* privateKey;
+
+/**
+ * @abstract 商户id(平台分配)
+ * @discussion 必填
+ */
+@property (nonatomic, copy, nonnull) NSString* merchantId;
+
 
 /**
  * @abstract 推送Id
