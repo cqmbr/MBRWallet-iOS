@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <MBRWalletNetworking/MBRBgCoin.h>
 
+typedef NS_ENUM(NSInteger, MBRWAccountSource) {
+    MBRWAccountSource_Unknown = 0,
+    MBRWAccountSource_Create,
+    MBRWAccountSource_Mnemonic,
+    MBRWAccountSource_Keystore
+};
+
+
 /**
  钱包账户
  */
@@ -20,6 +28,7 @@
     NSString* _mnemonic;
     NSString* _privateKeyHex;
     NSString* _privateKeyTouch;
+    MBRWAccountSource _source;
     NSMutableArray<MBRBgCoin *>* _erc20List;
     BOOL _isDefault;
 }
@@ -33,6 +42,11 @@
  账户地址
  */
 @property (nonatomic, copy, readonly) NSString* accountAddress;
+
+/**
+ 账户来源
+ */
+@property (nonatomic, assign, readonly) MBRWAccountSource source;
 
 
 #pragma mark - 创建账户
@@ -74,6 +88,31 @@
                   pwdSumary:(NSString*)pwdS
                    callback: (void (^)(MBRWAccount *account, NSError *NSError))callback;
 
+
+/**
+ 助记词是否有效
+
+ @param mnemonic 助记词
+ @return BOOL
+ */
++ (BOOL)isValidMnemonicPhrase:(NSString*)mnemonic;
+
+/**
+ 通过助记词获取地址
+
+ @param mnemonic 助记词
+ @return 地址小写
+ */
++ (NSString*)accountAddressWithMnemonic:(NSString*)mnemonic;
+
+
+/**
+ 是否包含助记词
+
+ @return BOOL
+ */
+- (BOOL)containsMnemonic;
+
 #pragma mark - 币操作
 /**
  获取币列表
@@ -96,5 +135,12 @@
  @return 币
  */
 - (MBRBgCoin *)getEthereumCoin;
+
+/**
+ 校验地址格式
+ 
+ @param addressString 地址字符串
+ */
++ (BOOL)validAddress:(NSString *)addressString;
 
 @end

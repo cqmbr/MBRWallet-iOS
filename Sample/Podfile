@@ -12,8 +12,6 @@ pod 'Masonry', '1.1.0'
 pod 'YYCategories', '1.0.4'
 pod 'QMUIKit', '2.6.1'
 
-# pod 'MBRWallet'
-pod 'MBRWallet', :path => '../../../pay/MBRWallet-iOS/MBRWallet.podspec'
-pod 'MBRWalletNetworking', :path => '../../../pay/MBRWalletNetworking/MBRWalletNetworking.podspec'
+pod 'MBRWallet'
 
 end

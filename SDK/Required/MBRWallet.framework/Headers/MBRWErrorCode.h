@@ -75,3 +75,14 @@ extern NSString * const FINGER_UNAVAILABLE_ERROR;
 extern NSString * const FINGERPRINT_ERROR;
 /// 账户中代币不存在
 extern NSString * const ACCOUNT_COIN_NOT_EXIST_ERROR;
+
+#pragma mark - 用户相关
+//若多用户情况，未设置钱包id，调用API的情况下会检测此配置
+extern NSString * const NO_WALLET_ERROR_CODE;
+
+//用户模式不支持
+extern NSString * const WALLET_MODE_NOT_SUPPORTED_CODE;
+
+//钱包数据删除失败
+extern NSString * const WALLET_DELETE_FAIL_CODE;
+
