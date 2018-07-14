@@ -346,6 +346,21 @@ typedef void(^MBRWFailureBlock)(NSError *error);
  */
 + (MBRBgCoin *)getCoinById:(NSString *)coinId;
 
+/**
+ 获取ETH货币
+ 
+ @return ETH币
+ */
++ (MBRBgCoin *)getEthCoin;
+
+/**
+ 通过tokenAddress获取币
+ 
+ @param tokenAddress 币的合约地址
+ @return 币
+ */
++ (MBRBgCoin *)getCoinByTokenAddress:(NSString *)tokenAddress;
+
 @end
 
 #pragma mark - 钱包密码辅助类
