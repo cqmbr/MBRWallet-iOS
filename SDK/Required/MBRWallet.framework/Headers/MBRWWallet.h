@@ -46,6 +46,11 @@ typedef void(^MBRWFailureBlock)(NSError *error);
 + (void)setupWithConfig:(MBRWWalletConfig*)config;
 
 /**
+ 获取当前钱包配置
+ */
++ (MBRWWalletConfig *)getCurrentConfig;
+
+/**
  设置当前钱包
 
  @param wId 钱包id

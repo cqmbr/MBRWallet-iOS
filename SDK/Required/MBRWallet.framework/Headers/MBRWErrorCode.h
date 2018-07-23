@@ -75,6 +75,9 @@ extern NSString * const FINGER_UNAVAILABLE_ERROR;
 extern NSString * const FINGERPRINT_ERROR;
 /// 账户中代币不存在
 extern NSString * const ACCOUNT_COIN_NOT_EXIST_ERROR;
+/// 支付方和接受方为同一个地址
+extern NSString * const PAY_PRAMAM_SAMEADDR_ERROR;
+
 
 #pragma mark - 用户相关
 //若多用户情况，未设置钱包id，调用API的情况下会检测此配置
