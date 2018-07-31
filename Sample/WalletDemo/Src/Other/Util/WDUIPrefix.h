@@ -15,3 +15,8 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <MJExtension/MJExtension.h>
 #import "WDToastUtil.h"
+
+#define WDScreenW [UIScreen mainScreen].bounds.size.width
+#define WDScreenH [UIScreen mainScreen].bounds.size.height
+
+#define WD_IsPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)

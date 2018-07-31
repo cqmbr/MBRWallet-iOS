@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
 	s.dependency 'GVUserDefaults'
 	s.dependency 'UICKeyChainStore'
-	s.dependency 'MBRWalletNetworking'
+	s.dependency 'MBRWalletNetworking', '~>0.0.5'
   
   s.vendored_frameworks = "SDK/Required/*.framework"
 

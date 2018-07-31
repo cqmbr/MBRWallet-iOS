@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		7501D5BACF215501ABEAA0E7 /* libPods-WalletDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB464CDFB732650DF29CE67 /* libPods-WalletDemo.a */; };
 		870D244720F5E2A2008CB11D /* WDConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 870D244620F5E2A2008CB11D /* WDConfigManager.m */; };
+		877B5A982110380100A85D37 /* WDSecurityTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 877B5A8F2110380100A85D37 /* WDSecurityTextField.m */; };
+		877B5A992110380100A85D37 /* WDKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 877B5A922110380100A85D37 /* WDKeyBoardView.m */; };
+		877B5A9A2110380100A85D37 /* WDLetterKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 877B5A932110380100A85D37 /* WDLetterKeyBoardView.m */; };
+		877B5A9B2110380100A85D37 /* WDKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 877B5A942110380100A85D37 /* WDKeyBoard.m */; };
+		877B5A9C2110380100A85D37 /* WDNumberKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 877B5A952110380100A85D37 /* WDNumberKeyBoardView.m */; };
+		877B5AA02110387000A85D37 /* NSArray+WDMas.m in Sources */ = {isa = PBXBuildFile; fileRef = 877B5A9E2110387000A85D37 /* NSArray+WDMas.m */; };
+		877B5AA521103A5800A85D37 /* UIImage+WD.m in Sources */ = {isa = PBXBuildFile; fileRef = 877B5AA421103A5800A85D37 /* UIImage+WD.m */; };
 		878BBAA620E2014500EA0DE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 878BBA5520E2014500EA0DE3 /* LaunchScreen.storyboard */; };
 		878BBAA720E2014500EA0DE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 878BBA5720E2014500EA0DE3 /* Assets.xcassets */; };
 		878BBAA820E2014500EA0DE3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 878BBA5A20E2014500EA0DE3 /* Info.plist */; };
@@ -52,6 +59,20 @@
 		39A1A03BD30AD7CF77BB21BA /* libPods-DCPay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DCPay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		870D244520F5E2A2008CB11D /* WDConfigManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDConfigManager.h; sourceTree = "<group>"; };
 		870D244620F5E2A2008CB11D /* WDConfigManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDConfigManager.m; sourceTree = "<group>"; };
+		877B5A8E2110380100A85D37 /* WDLetterKeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDLetterKeyBoardView.h; sourceTree = "<group>"; };
+		877B5A8F2110380100A85D37 /* WDSecurityTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDSecurityTextField.m; sourceTree = "<group>"; };
+		877B5A902110380100A85D37 /* WDNumberKeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDNumberKeyBoardView.h; sourceTree = "<group>"; };
+		877B5A912110380100A85D37 /* WDKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDKeyBoard.h; sourceTree = "<group>"; };
+		877B5A922110380100A85D37 /* WDKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDKeyBoardView.m; sourceTree = "<group>"; };
+		877B5A932110380100A85D37 /* WDLetterKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDLetterKeyBoardView.m; sourceTree = "<group>"; };
+		877B5A942110380100A85D37 /* WDKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDKeyBoard.m; sourceTree = "<group>"; };
+		877B5A952110380100A85D37 /* WDNumberKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDNumberKeyBoardView.m; sourceTree = "<group>"; };
+		877B5A962110380100A85D37 /* WDSecurityTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDSecurityTextField.h; sourceTree = "<group>"; };
+		877B5A972110380100A85D37 /* WDKeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDKeyBoardView.h; sourceTree = "<group>"; };
+		877B5A9E2110387000A85D37 /* NSArray+WDMas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WDMas.m"; sourceTree = "<group>"; };
+		877B5A9F2110387000A85D37 /* NSArray+WDMas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+WDMas.h"; sourceTree = "<group>"; };
+		877B5AA321103A5800A85D37 /* UIImage+WD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+WD.h"; sourceTree = "<group>"; };
+		877B5AA421103A5800A85D37 /* UIImage+WD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WD.m"; sourceTree = "<group>"; };
 		8782158C2067E1B5004840E7 /* WalletDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalletDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		878BBA5520E2014500EA0DE3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		878BBA5720E2014500EA0DE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -156,6 +177,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		877B5A8C2110380100A85D37 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				877B5A9D2110387000A85D37 /* Catogory */,
+				877B5A8D2110380100A85D37 /* KeyBoard */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		877B5A8D2110380100A85D37 /* KeyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				877B5A912110380100A85D37 /* WDKeyBoard.h */,
+				877B5A942110380100A85D37 /* WDKeyBoard.m */,
+				877B5A972110380100A85D37 /* WDKeyBoardView.h */,
+				877B5A922110380100A85D37 /* WDKeyBoardView.m */,
+				877B5A8E2110380100A85D37 /* WDLetterKeyBoardView.h */,
+				877B5A932110380100A85D37 /* WDLetterKeyBoardView.m */,
+				877B5A902110380100A85D37 /* WDNumberKeyBoardView.h */,
+				877B5A952110380100A85D37 /* WDNumberKeyBoardView.m */,
+				877B5A962110380100A85D37 /* WDSecurityTextField.h */,
+				877B5A8F2110380100A85D37 /* WDSecurityTextField.m */,
+			);
+			path = KeyBoard;
+			sourceTree = "<group>";
+		};
+		877B5A9D2110387000A85D37 /* Catogory */ = {
+			isa = PBXGroup;
+			children = (
+				877B5A9E2110387000A85D37 /* NSArray+WDMas.m */,
+				877B5A9F2110387000A85D37 /* NSArray+WDMas.h */,
+				877B5AA321103A5800A85D37 /* UIImage+WD.h */,
+				877B5AA421103A5800A85D37 /* UIImage+WD.m */,
+			);
+			path = Catogory;
+			sourceTree = "<group>";
+		};
 		878215832067E1B5004840E7 = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +246,7 @@
 		878BBA5B20E2014500EA0DE3 /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				877B5A8C2110380100A85D37 /* Custom */,
 				878BBA5C20E2014500EA0DE3 /* Transaction */,
 				878BBA6620E2014500EA0DE3 /* Password */,
 				878BBA6920E2014500EA0DE3 /* Other */,
@@ -246,12 +305,12 @@
 		878BBA6B20E2014500EA0DE3 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				878BBA6C20E2014500EA0DE3 /* WDToastUtil.m */,
-				878BBA6D20E2014500EA0DE3 /* WDQRCodeTool.h */,
 				878BBA6E20E2014500EA0DE3 /* WDDevice.h */,
-				878BBA6F20E2014500EA0DE3 /* WDToastUtil.h */,
-				878BBA7020E2014500EA0DE3 /* WDResource.h */,
+				878BBA6D20E2014500EA0DE3 /* WDQRCodeTool.h */,
 				878BBA7120E2014500EA0DE3 /* WDQRCodeTool.m */,
+				878BBA7020E2014500EA0DE3 /* WDResource.h */,
+				878BBA6F20E2014500EA0DE3 /* WDToastUtil.h */,
+				878BBA6C20E2014500EA0DE3 /* WDToastUtil.m */,
 				878BBA7220E2014500EA0DE3 /* WDUIPrefix.h */,
 			);
 			path = Util;
@@ -482,6 +541,10 @@
 				878BBAAB20E2014500EA0DE3 /* WDFeeAdjustView.m in Sources */,
 				878BBAB220E2014500EA0DE3 /* WDHomeLeftMenuHandler.m in Sources */,
 				878BBABE20E2014500EA0DE3 /* WDAccountCreateViewController.m in Sources */,
+				877B5A9B2110380100A85D37 /* WDKeyBoard.m in Sources */,
+				877B5AA521103A5800A85D37 /* UIImage+WD.m in Sources */,
+				877B5A9C2110380100A85D37 /* WDNumberKeyBoardView.m in Sources */,
+				877B5AA02110387000A85D37 /* NSArray+WDMas.m in Sources */,
 				878BBAA920E2014500EA0DE3 /* WDTransferViewController.m in Sources */,
 				878BBAB320E2014500EA0DE3 /* WDHomeLeftMenuView.m in Sources */,
 				878BBAB120E2014500EA0DE3 /* AppDelegate.m in Sources */,
@@ -493,6 +556,7 @@
 				878BBAAF20E2014500EA0DE3 /* WDQRCodeTool.m in Sources */,
 				878BBAAA20E2014500EA0DE3 /* WDQRCodeScanViewController.m in Sources */,
 				878BBAC020E2014500EA0DE3 /* WDBackUpContentViewController.m in Sources */,
+				877B5A9A2110380100A85D37 /* WDLetterKeyBoardView.m in Sources */,
 				878BBAB020E2014500EA0DE3 /* main.m in Sources */,
 				878BBAC820E2014500EA0DE3 /* WDViewControllerBase.m in Sources */,
 				878BBAB920E2014500EA0DE3 /* WDAddDCTableViewCell.m in Sources */,
@@ -501,7 +565,9 @@
 				878BBABD20E2014500EA0DE3 /* WDBalanceSingleDCViewController.m in Sources */,
 				878BBABB20E2014500EA0DE3 /* WDBalanceDetailViewController.m in Sources */,
 				878BBAC920E2014500EA0DE3 /* UIButton+MBRElarge.m in Sources */,
+				877B5A982110380100A85D37 /* WDSecurityTextField.m in Sources */,
 				878BBAC220E2014500EA0DE3 /* WDBlanceViewController.m in Sources */,
+				877B5A992110380100A85D37 /* WDKeyBoardView.m in Sources */,
 				878BBAB820E2014500EA0DE3 /* WDButtonGroupTagsFrame.m in Sources */,
 				878BBAAE20E2014500EA0DE3 /* WDToastUtil.m in Sources */,
 			);

@@ -13,5 +13,8 @@ pod 'YYCategories', '1.0.4'
 pod 'QMUIKit', '2.6.1'
 
 pod 'MBRWallet'
+#pod 'MBRWallet', :path => '../MBRWallet.podspec'
+#pod 'MBRWallet', :path => '../../../pay/MBRWallet-iOS/MBRWallet.podspec'
+
 
 end

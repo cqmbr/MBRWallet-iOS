@@ -26,6 +26,14 @@
 #define WDColor_11 UIColorHex(#B3B3BA)
 #define WDColor_12 UIColorHex(#FEBE17)
 #define WD_TextBorderColor UIColorHex(#353944)
+
+#define WDColor_363A44 UIColorHex(#363A44)
+#define WDColor_34A9FF UIColorHex(#34A9FF)
+#define WDColor_1E1C2A UIColorHex(#1E1C2A)
+
+
+
+
 //按钮字体蓝色
 #define WDBtnBlueColor UIColorHex(#34A9FF)
 

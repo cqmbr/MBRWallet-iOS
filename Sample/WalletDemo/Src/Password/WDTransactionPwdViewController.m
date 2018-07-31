@@ -11,6 +11,7 @@
 #import <MBProgressHUD+BWMExtension/MBProgressHUD+BWMExtension.h>
 #import <MBRWalletNetworking/MBRAccount.h>
 #import <MBRWallet/MBRWWallet.h>
+#import "WDSecurityTextField.h"
 
 @interface WDTransactionPwdViewController () <UITextFieldDelegate>
 
@@ -91,7 +92,7 @@
 - (void)setupSetPwdInputViews {
     
     // 输入密码
-    WDCommonTextField *pwdTextField = [[WDCommonTextField alloc] init];
+    WDCommonTextField *pwdTextField = [[WDSecurityTextField alloc] init];
     pwdTextField.placeholder = @"请输入密码";
     pwdTextField.delegate = self;
     pwdTextField.secureTextEntry = YES;
@@ -105,7 +106,7 @@
     }];
     
     // 重复密码
-    WDCommonTextField *repeatPwdTextField = [[WDCommonTextField alloc]init];
+    WDCommonTextField *repeatPwdTextField = [[WDSecurityTextField alloc]init];
     repeatPwdTextField.placeholder = @"请再次输入密码";
     repeatPwdTextField.delegate = self;
     repeatPwdTextField.secureTextEntry = YES;
@@ -131,7 +132,7 @@
 - (void)setupModifyPwdInputViews {
     
     // 旧密码
-    WDCommonTextField *pwdHindTextField2 = [[WDCommonTextField alloc] init];
+    WDCommonTextField *pwdHindTextField2 = [[WDSecurityTextField alloc] init];
     pwdHindTextField2.placeholder = @"请输入旧密码";
     pwdHindTextField2.delegate = self;
     [self.scorllView addSubview:pwdHindTextField2];
@@ -144,7 +145,7 @@
     }];
 
     // 输入新密码
-    WDCommonTextField *pwdTextField = [[WDCommonTextField alloc] init];
+    WDCommonTextField *pwdTextField = [[WDSecurityTextField alloc] init];
     pwdTextField.placeholder = @"请输入新密码";
     pwdTextField.delegate = self;
     pwdTextField.secureTextEntry = YES;
@@ -156,7 +157,7 @@
     }];
     
     // 重复密码
-    WDCommonTextField *repeatPwdTextField = [[WDCommonTextField alloc]init];
+    WDCommonTextField *repeatPwdTextField = [[WDSecurityTextField alloc]init];
     repeatPwdTextField.placeholder = @"请再次输入密码";
     repeatPwdTextField.delegate = self;
     repeatPwdTextField.secureTextEntry = YES;

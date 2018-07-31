@@ -10,6 +10,12 @@
 #import "WDQRCodeView.h"
 #import "WDTransferViewController.h"
 #import <MBRWallet/MBRWallet.h>
+#import "WDConfigManager.h"
+#import "WDResource.h"
+#import "WDToastUtil.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
+#define WD_PREPAY_URL @"http://47.100.47.200:9927/payIndex/prepay?channel=%@&merchantId=%@&coinId=%@&amount=%@"
 
 @interface WDBalanceSingleDCViewController ()
 
@@ -64,7 +70,8 @@
     
     [WDToastUtil showLoadingInView:nil];
     
-    NSString *urlString = [NSString stringWithFormat:@"http://47.100.47.200:9927/home/prepay?coinId=%@&amount=%@",coinId,amount];
+    
+    NSString *urlString = [NSString stringWithFormat:WD_PREPAY_URL, [WDConfigManager channel], [WDConfigManager merchantId],coinId,amount];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLSession *session=[NSURLSession sharedSession];
@@ -80,7 +87,13 @@
                                                                              options:NSJSONReadingMutableContainers
                                                                                error:&error];
                 if (error == nil) {
-                    NSString *code = responseDict[@"code"];
+                    id rCode = responseDict[@"code"];
+                    NSString *code = @"";
+                    if ([rCode isKindOfClass:[NSString class]]) {
+                        code = rCode;
+                    } else if ([rCode isKindOfClass:[NSNumber class]]) {
+                        code = [rCode stringValue];
+                    }
                     if ([code isEqualToString:@"200"]) {
                         // 请求结果
                         dispatch_async(dispatch_get_main_queue(), ^{
