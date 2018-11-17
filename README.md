@@ -1,3 +1,4 @@
 # MBRWallet-iOS
-NO LONGER MAINTAINED, please visit [cqlinkoff/WalletSDK-iOS](https://github.com/cqlinkoff/WalletSDK-iOS)
+NO LONGER MAINTAINED, please visit [cqlinkoff/Wallet-iOS](https://github.com/cqlinkoff/Wallet-iOS)
+
 MBRWallet SDK for iOS
